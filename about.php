@@ -332,7 +332,7 @@
           <div class="row">
             <div class="col">
               <div class="pxn_page_header_content">
-                <h1 class="page_title pxn-split-text">About Us</h1>
+                <h1 class="page_title pxn-split-text"><?= c('page_title', 'About Us') ?></h1>
                 <div class="pxn_breadcrumb pxn-fade">
                   <span><a href="index.php">Home</a></span>
                   /
@@ -435,8 +435,8 @@
 
                   <div class="pxn-h1_about_content">
                     <div class="section_heading">
-                      <span class="sec_sub pxn-fade">About Our Consulting</span>
-                      <h2 class="sec_title pxn-split-text">Smart Consulting for Ambitious Companies</h2>
+                      <span class="sec_sub pxn-fade"><?= c('about_subtitle', 'About Our Consulting') ?></span>
+                      <h2 class="sec_title pxn-split-text"><?= c('about_title', 'Smart Consulting for Ambitious Companies') ?></h2>
                       <div class="sec_desc pxn-fade">We are a results-driven business consulting firm dedicated to
                         helping
                         organizations improve performance, optimize operations, and achieve sustainable growth.</div>

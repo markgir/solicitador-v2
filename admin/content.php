@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $selectedPage) {
     foreach ($_POST as $key => $value) {
         if (strpos($key, 'content_') === 0) {
             $id = (int) substr($key, 8);
+            if ($id <= 0) continue;
             $stmt->bindValue(':val', trim($value), PDO::PARAM_STR);
             $stmt->bindValue(':id', $id, PDO::PARAM_INT);
             $stmt->bindValue(':page', $selectedPage, PDO::PARAM_STR);
@@ -41,19 +42,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $selectedPage) {
 include __DIR__ . '/includes/header.php';
 ?>
 
-<div class="d-flex justify-content-between align-items-center mb-4">
+<div class="page-header">
+    <nav class="breadcrumb-admin" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
+            <li class="breadcrumb-item active">Conteúdos</li>
+        </ol>
+    </nav>
     <h2>Editar Conteúdos</h2>
+    <p class="text-muted mb-0">Altere textos e informações de cada página</p>
 </div>
 
 <!-- Page selector -->
 <div class="row mb-4">
-    <div class="col-md-6">
-        <label class="form-label fw-bold">Selecionar Página</label>
+    <div class="col-md-5">
+        <label class="form-label">Selecionar Página</label>
         <select class="form-select" onchange="window.location='content.php?page='+this.value">
             <option value="">— Escolha uma página —</option>
             <?php foreach ($pages as $p): ?>
             <option value="<?= htmlspecialchars($p, ENT_QUOTES, 'UTF-8') ?>" <?= $selectedPage === $p ? 'selected' : '' ?>>
-                <?= htmlspecialchars(page_label($p), ENT_QUOTES, 'UTF-8') ?> (<?= htmlspecialchars($p, ENT_QUOTES, 'UTF-8') ?>)
+                <?= htmlspecialchars(page_label($p), ENT_QUOTES, 'UTF-8') ?>
             </option>
             <?php endforeach; ?>
         </select>
@@ -62,7 +70,7 @@ include __DIR__ . '/includes/header.php';
 
 <?php if (isset($saved)): ?>
 <div class="alert alert-success alert-dismissible fade show">
-    <i class="bi bi-check-circle"></i> Conteúdos guardados com sucesso!
+    <i class="bi bi-check-circle me-1"></i> Conteúdos guardados com sucesso!
     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 </div>
 <?php endif; ?>
@@ -72,15 +80,17 @@ include __DIR__ . '/includes/header.php';
     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token'], ENT_QUOTES, 'UTF-8') ?>">
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <strong><?= htmlspecialchars(page_label($selectedPage), ENT_QUOTES, 'UTF-8') ?></strong> — Conteúdos
-            <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save"></i> Guardar Tudo</button>
+            <span><i class="bi bi-pencil-square me-1"></i> <?= htmlspecialchars(page_label($selectedPage), ENT_QUOTES, 'UTF-8') ?></span>
+            <button type="submit" class="btn btn-primary btn-sm">
+                <i class="bi bi-check-lg me-1"></i>Guardar
+            </button>
         </div>
         <div class="card-body">
             <?php foreach ($contentItems as $item): ?>
             <div class="mb-3">
-                <label class="form-label fw-bold">
+                <label class="form-label">
                     <?= htmlspecialchars($item['label'] ?: $item['content_key'], ENT_QUOTES, 'UTF-8') ?>
-                    <small class="text-muted fw-normal">(<?= htmlspecialchars($item['content_key'], ENT_QUOTES, 'UTF-8') ?>)</small>
+                    <small class="text-muted fw-normal ms-1">(<?= htmlspecialchars($item['content_key'], ENT_QUOTES, 'UTF-8') ?>)</small>
                 </label>
                 <?php if ($item['content_type'] === 'textarea' || $item['content_type'] === 'html'): ?>
                 <textarea name="content_<?= (int)$item['id'] ?>" class="form-control" rows="3"
@@ -93,13 +103,17 @@ include __DIR__ . '/includes/header.php';
             </div>
             <?php endforeach; ?>
         </div>
-        <div class="card-footer text-end">
-            <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Guardar Alterações</button>
+        <div class="card-footer text-end" style="background:#f8fafc;">
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-check-lg me-1"></i>Guardar Alterações
+            </button>
         </div>
     </div>
 </form>
 <?php elseif ($selectedPage): ?>
-<div class="alert alert-info">Nenhum conteúdo editável encontrado para esta página.</div>
+<div class="alert alert-info">
+    <i class="bi bi-info-circle me-1"></i> Nenhum conteúdo editável encontrado para esta página.
+</div>
 <?php endif; ?>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>

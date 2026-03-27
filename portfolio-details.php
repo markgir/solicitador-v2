@@ -332,7 +332,7 @@
           <div class="row">
             <div class="col">
               <div class="pxn_page_header_content">
-                <h1 class="page_title">Portfolio Details</h1>
+                <h1 class="page_title"><?= c('page_title', 'Portfolio Details') ?></h1>
                 <div class="pxn_breadcrumb">
                   <span><a href="index.php">Home</a></span>
                   /

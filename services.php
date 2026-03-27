@@ -332,7 +332,7 @@
           <div class="row">
             <div class="col">
               <div class="pxn_page_header_content">
-                <h1 class="page_title">Our Services</h1>
+                <h1 class="page_title"><?= c('page_title', 'Our Services') ?></h1>
                 <div class="pxn_breadcrumb">
                   <span><a href="index.php">Home</a></span>
                   /
@@ -359,8 +359,8 @@
               <div class="col">
                 <div class="pxn-h2_services_wrap">
                   <div class="section_heading text-center">
-                    <span class="sec_sub">What We Offer</span>
-                    <h2 class="sec_title">Innovates Services That Elevate Your Business</h2>
+                    <span class="sec_sub"><?= c('services_subtitle', 'What We Offer') ?></span>
+                    <h2 class="sec_title"><?= c('services_title', 'Innovates Services That Elevate Your Business') ?></h2>
                   </div>
 
                   <div class="pxn-h2_services">

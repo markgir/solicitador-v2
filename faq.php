@@ -332,7 +332,7 @@
           <div class="row">
             <div class="col">
               <div class="pxn_page_header_content">
-                <h1 class="page_title">FAQs</h1>
+                <h1 class="page_title"><?= c('page_title', 'FAQs') ?></h1>
                 <div class="pxn_breadcrumb">
                   <span><a href="index.php">Home</a></span>
                   /
@@ -356,8 +356,8 @@
                 <div class="pxn-h2_faq_wrap">
                   <div class="faq_content">
                     <div class="section_heading">
-                      <span class="sec_sub">Frequently question</span>
-                      <h2 class="sec_title">Common Questions About Our Services</h2>
+                      <span class="sec_sub"><?= c('faq_subtitle', 'Frequently question') ?></span>
+                      <h2 class="sec_title"><?= c('faq_title', 'Common Questions About Our Services') ?></h2>
                     </div>
 
                     <div class="pxn_accordion" id="pxnAccordion">

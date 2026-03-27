@@ -332,7 +332,7 @@
           <div class="row">
             <div class="col">
               <div class="pxn_page_header_content">
-                <h1 class="page_title">Team Members</h1>
+                <h1 class="page_title"><?= c('page_title', 'Team Members') ?></h1>
                 <div class="pxn_breadcrumb">
                   <span><a href="index.php">Home</a></span>
                   /
@@ -355,8 +355,8 @@
               <div class="col">
                 <div class="pxn-h2_team_wrap">
                   <div class="section_heading text-center">
-                    <span class="sec_sub">Meet the Team</span>
-                    <h2 class="sec_title">Meet Our Leadership and Consulting Team</h2>
+                    <span class="sec_sub"><?= c('team_subtitle', 'Meet the Team') ?></span>
+                    <h2 class="sec_title"><?= c('team_title', 'Meet Our Leadership and Consulting Team') ?></h2>
                   </div>
 
                   <div class="team_wrapper">

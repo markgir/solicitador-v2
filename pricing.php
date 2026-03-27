@@ -332,7 +332,7 @@
           <div class="row">
             <div class="col">
               <div class="pxn_page_header_content">
-                <h1 class="page_title">Pricing Table</h1>
+                <h1 class="page_title"><?= c('page_title', 'Pricing Table') ?></h1>
                 <div class="pxn_breadcrumb">
                   <span><a href="index.php">Home</a></span>
                   /
@@ -356,8 +356,8 @@
                 <div class="pxn-h1_pricing_wrapper">
                   <div class="section_heading">
                     <div class="heading_text">
-                      <span class="sec_sub">Pricing Plans</span>
-                      <h2 class="sec_title">Choose the Right Plan for Your Business</h2>
+                      <span class="sec_sub"><?= c('pricing_subtitle', 'Pricing Plans') ?></span>
+                      <h2 class="sec_title"><?= c('pricing_title', 'Choose the Right Plan for Your Business') ?></h2>
                     </div>
 
                     <label class="pxn_toggle_switcher">

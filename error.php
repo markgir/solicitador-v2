@@ -332,7 +332,7 @@
           <div class="row">
             <div class="col">
               <div class="pxn_page_header_content">
-                <h1 class="page_title">404</h1>
+                <h1 class="page_title"><?= c('page_title', '404') ?></h1>
                 <div class="pxn_breadcrumb">
                   <span><a href="index.php">Home</a></span>
                   /
@@ -358,10 +358,8 @@
                   <div class="error_img">
                     <img src="./assets/images/error/erorr-img.png" alt="Error">
                   </div>
-                  <h2 class="error_title">Oops! Page Not Found</h2>
-                  <div class="error_desc">The page you are looking for doesn't exist or has been moved. Please go back
-                    to
-                    the homepage.</div>
+                  <h2 class="error_title"><?= c('error_title', 'Oops! Page Not Found') ?></h2>
+                  <div class="error_desc"><?= c('error_description', 'The page you are looking for doesn\'t exist or has been moved. Please go back to the homepage.') ?></div>
                   <a href="index.php" class="error_btn pxn-btn-primary">
                     <span class="btn_text"><span>Back To Home</span></span>
                     <span class="btn_icon"><i class="pxni-arrow-right"></i></span>

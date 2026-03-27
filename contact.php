@@ -332,7 +332,7 @@
           <div class="row">
             <div class="col">
               <div class="pxn_page_header_content">
-                <h1 class="page_title">Contact Us</h1>
+                <h1 class="page_title"><?= c('page_title', 'Contact Us') ?></h1>
                 <div class="pxn_breadcrumb">
                   <span><a href="index.php">Home</a></span>
                   /
@@ -356,8 +356,8 @@
               <div class="col">
                 <div class="pxn_contact_page_wrap">
                   <div class="section_heading text-center">
-                    <span class="sec_sub">Contact Us</span>
-                    <h2 class="sec_title">Let’s Discuss How We Can Help You Succeed</h2>
+                    <span class="sec_sub"><?= c('contact_subtitle', 'Contact Us') ?></span>
+                    <h2 class="sec_title"><?= c('contact_title', 'Let\'s Discuss How We Can Help You Succeed') ?></h2>
                   </div>
 
                   <div class="pxn_contact_page_form_wrap">

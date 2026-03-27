@@ -1,0 +1,1681 @@
+<?php require_once __DIR__ . '/includes/functions.php'; $current_page = 'index-2'; ?>
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+
+  <!-- Site Title -->
+  <title>Rovix - Business Consulting HTML Template</title>
+
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.png">
+
+  <!-- CSS here -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/pxn-icons.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+  <link rel="stylesheet" href="assets/css/nice-select.min.css">
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
+  <link rel="stylesheet" href="assets/css/glightbox.min.css">
+  <link rel="stylesheet" href="assets/css/leaflet.min.css">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+  <!-- Magic Cursor -->
+  <div class="mouse-cursor cursor-outer"></div>
+  <div class="mouse-cursor cursor-inner"></div>
+  <!-- Magic Cursor -->
+
+  <!-- Preloader Start -->
+  <div class="preloader" id="pxn-preloader">
+    <div class="loader_content">
+      <div class="loading"></div>
+      <div class="loader_image"><img src="assets/images/loader.svg" alt="Loader"></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- back to top start -->
+  <div class="pxn_back-to-top">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- back to top end -->
+
+  <!-- start: Search Popup -->
+  <div class="pxn_search_popup_overlay"></div>
+  <div class="pxn_search_popup">
+    <div class="search_close">
+      <button type="button" class="search_close_btn">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          </path>
+          <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <form action="#" class="search_form">
+            <h2 class="search_title">Search portfolios, services or blogs...</h2>
+            <div class="search_box">
+              <input class="search-input-field" type="search" placeholder="Search here..." required>
+              <button type="submit">
+                <i class="pxni-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end: Search Popup -->
+
+  <!-- start: Offcanvas -->
+  <div class="pxn_offcanvas_overlay"></div>
+  <div class="pxn_offcanvas">
+    <div class="offcanvas_bg"></div>
+    <div class="offcanvas_wrapper">
+
+      <!-- top -->
+      <div class="offcanvas_top d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <div class="offcanvas_logo">
+          <a href="index.php" class="logo"><img src="./assets/images/logos/secondary-logo.png" alt="LOGO"></a>
+        </div>
+
+        <button class="offcanvas_close">
+          <span class="text">Close</span>
+          <span class="icon"><i class="pxni-close"></i></span>
+        </button>
+      </div>
+
+      <div class="offcanvas_desc  d-none d-lg-block">
+        Developing personalize our customer journeys to increase satisfaction &amp; loyalty of our expansion recognized
+        by industry leaders.
+      </div>
+
+      <div class="offcanvas_search d-none d-lg-block">
+        <div class="search_title">Search Now!</div>
+
+        <form method="get" action="index.php">
+          <button type="submit"><i class="pxni-search"></i></button>
+          <input type="search" autocomplete="off" name="s" value="" placeholder="Search here...">
+        </form>
+      </div>
+
+      <!-- mobile menu -->
+      <div class="pxn_offcanvas_menu mobile_menu d-lg-none mean-container"></div>
+
+      <div class="offcanvas_contact pxn_contact">
+        <div class="contact_title">Location</div>
+
+        <div class="contact_info">Seattle (major city in the state Washington).</div>
+      </div>
+
+      <div class="offcanvas_contact pxn_contact">
+        <div class="contact_title">Contact</div>
+
+        <a href="tel:+880123456789" class="contact_info">+880 (123) 456 789</a>
+        <a href="mailto:support@rovix.com" class="contact_info">support@rovix.com</a>
+      </div>
+
+      <ul class="offcanvas_socials pxn_socials_3">
+        <li>
+          <a class="icon" href="https://facebook.com" target="_blank"><i class="pxni-facebook"></i></a>
+        </li>
+        <li>
+          <a class="icon" href="https://linkedin.com" target="_blank"><i class="pxni-linkedin"></i></a>
+        </li>
+        <li>
+          <a class="icon" href="https://instagram.com" target="_blank"><i class="pxni-instagram"></i></a>
+        </li>
+        <li>
+          <a class="icon" href="https://twitter.com" target="_blank"><i class="pxni-x-twitter"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- end: Offcanvas -->
+
+  <!-- start: Header Area -->
+  <header class="pxn-header pxn-header-2 header-absolute">
+    <div class="pxn_header_main">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="pxn_header_main_wrap d-flex flex-wrap align-items-center">
+              <!-- logo -->
+              <a class="pxn_site_logo" href="index.php">
+                <img src="assets/images/logos/primary-logo.png" alt="Logo">
+              </a>
+
+              <div class="pxn_header_main_inner d-none d-lg-inline-flex flex-wrap align-items-center">
+                <!-- navigation -->
+                <nav class="pxn_main_navigation" id="mobile-menu">
+                  <ul>
+                    <li class="has-dropdown current-menu-ancestor"><a href="#">Home</a>
+                      <ul class="sub-menu">
+                        <li><a href="index.php">Home One</a></li>
+                        <li class="current-menu-item"><a href="index-2.php">Home Two</a></li>
+                        <li><a href="index-3.php">Home Three</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="#">Services</a>
+                      <ul class="sub-menu">
+                        <li><a href="services.php">Services</a></li>
+                        <li><a href="service-details.php">Services Details</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="#">Pages</a>
+                      <ul class="sub-menu">
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="team.php">Team</a></li>
+                        <li><a href="pricing.php">Pricing Page</a></li>
+                        <li><a href="faq.php">FAQ Page</a></li>
+                        <li><a href="error.php">Error 404</a></li>
+                        <li><a href="coming-soon.php">Coming Soon</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="#">Portfolios</a>
+                      <ul class="sub-menu">
+                        <li><a href="portfolios.php">Portfolios</a></li>
+                        <li><a href="portfolio-details.php">Portfolio Details</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="#">Blog</a>
+                      <ul class="sub-menu">
+                        <li><a href="blog.php">Blog</a></li>
+                        <li><a href="blog-details.php">Blog Details</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="contact.php">Contact</a></li>
+                  </ul>
+                </nav>
+
+                <!-- search -->
+                <button class="pxn_header_search d-none d-xl-inline-flex">
+                  <span>Explore</span>
+                  <i class="pxni-search"></i>
+                </button>
+              </div>
+
+
+              <!-- right info -->
+              <div class="pxn_header_right d-inline-flex flex-wrap align-items-center">
+                <!-- contact -->
+                <div class="pxn_header_contact d-none d-xxl-inline-flex">
+                  <a href="+880123456789" class="contact_icon">
+                    <i class="pxni-phone"></i>
+                  </a>
+                  <a href="+880123456789" class="contact_no">+880 (123) 456 789</a>
+                </div>
+
+                <!-- offcanvas toggle -->
+                <button class="pxn_offcanvas_toggle">
+                  <span class="text">Menu</span>
+                  <span class="icon"><i class="pxni-menu"></i></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header class="pxn-header header-duplicate pxn-header-2 header-sticky">
+    <div class="pxn_header_main">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="pxn_header_main_wrap d-flex flex-wrap align-items-center">
+              <!-- logo -->
+              <a class="pxn_site_logo" href="index.php">
+                <img src="assets/images/logos/primary-logo.png" alt="Logo">
+              </a>
+
+              <div class="pxn_header_main_inner d-none d-lg-inline-flex flex-wrap align-items-center">
+                <!-- navigation -->
+                <nav class="pxn_main_navigation">
+                  <ul>
+                    <li class="has-dropdown current-menu-ancestor"><a href="#">Home</a>
+                      <ul class="sub-menu">
+                        <li><a href="index.php">Home One</a></li>
+                        <li class="current-menu-item"><a href="index-2.php">Home Two</a></li>
+                        <li><a href="index-3.php">Home Three</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="#">Services</a>
+                      <ul class="sub-menu">
+                        <li><a href="services.php">Services</a></li>
+                        <li><a href="service-details.php">Services Details</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="#">Pages</a>
+                      <ul class="sub-menu">
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="team.php">Team</a></li>
+                        <li><a href="pricing.php">Pricing Page</a></li>
+                        <li><a href="faq.php">FAQ Page</a></li>
+                        <li><a href="error.php">Error 404</a></li>
+                        <li><a href="coming-soon.php">Coming Soon</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="#">Portfolios</a>
+                      <ul class="sub-menu">
+                        <li><a href="portfolios.php">Portfolios</a></li>
+                        <li><a href="portfolio-details.php">Portfolio Details</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="#">Blog</a>
+                      <ul class="sub-menu">
+                        <li><a href="blog.php">Blog</a></li>
+                        <li><a href="blog-details.php">Blog Details</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="contact.php">Contact</a></li>
+                  </ul>
+                </nav>
+
+                <!-- search -->
+                <button class="pxn_header_search d-none d-xl-inline-flex">
+                  <span>Explore</span>
+                  <i class="pxni-search"></i>
+                </button>
+              </div>
+
+
+              <!-- right info -->
+              <div class="pxn_header_right d-inline-flex flex-wrap align-items-center">
+                <!-- contact -->
+                <div class="pxn_header_contact d-none d-xxl-inline-flex">
+                  <a href="+880123456789" class="contact_icon">
+                    <i class="pxni-phone"></i>
+                  </a>
+                  <a href="+880123456789" class="contact_no">+880 (123) 456 789</a>
+                </div>
+
+                <!-- offcanvas toggle -->
+                <button class="pxn_offcanvas_toggle">
+                  <span class="text">Menu</span>
+                  <span class="icon"><i class="pxni-menu"></i></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end: Header Area -->
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <main id="content" class="site-main pxn-conetnt">
+        <?php if (section_visible($current_page, 'hero')): ?>
+<!-- start: Hero Section -->
+        <section class="pxn-h2-hero-section overflow-hidden" data-bg-image="./assets/images/hero/h2-hero-bg.png">
+
+          <img src="./assets/images/hero/h2-hero-left-shape.png" alt="Shape" class="left_shape pxn-bounce-y">
+
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="pxn-h2_hero_wrapper">
+                  <div class="hero_content">
+                    <h1 class="hero_title pxn-chars-up">Turning Strategy into Success</h1>
+                    <div class="hero_desc pxn-fade" data-delay=".5">We deliver innovative corporate solutions that help
+                      businesses
+                      thrive in
+                      today’s
+                      competitive market. Our team</div>
+                    <div class="pxn-fade" data-delay=".7">
+                      <a href="about.php" class="hero_btn pxn-btn-primary">
+                        <span class="btn_text"><span>Get Started</span></span>
+                        <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="hero_img pxn-fade" data-delay="1">
+                    <img src="./assets/images/hero/h2-hero-img.png" alt="Hero">
+
+                    <div class="pxn_circle_btn pxn-zoom" data-delay="1.2">
+                      <img src="./assets/images/hero/h2-circle-text.png" alt="circle" class="circle_text">
+
+                      <span class="icon"><i class="pxni-star-circle"></i></span>
+                    </div>
+
+                    <div class="growth_chart pxn-bounce-y pxn-fade" data-delay="1.3" data-direction="right">
+                      <img src="./assets/images/hero/h2-growth-chart.png" alt="Chart">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Hero Section -->
+<?php endif; /* hero */ ?>
+
+        <?php if (section_visible($current_page, 'about')): ?>
+<!-- start: About Section -->
+        <section class="pxn-h2-about-section overflow-hidden">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="pxn-h2_about_wrap">
+                  <div class="pxn-h2_about_img">
+                    <div class="pxn-img-reveal">
+                      <img src="./assets/images/about/h2-about-img.jpg" alt="About">
+                    </div>
+                    <div class="bg_color pxn-fade" data-direction="right" data-delay="1.3"></div>
+
+                    <a href="https://www.youtube.com/watch?v=SjJhuZQlkbA" class="pxn_circle_btn video_popup pxn-zoom"
+                      data-delay="1.5">
+                      <img src="./assets/images/hero/h2-circle-text.png" alt="circle" class="circle_text">
+
+                      <span class="icon"><i class="pxni-play"></i></span>
+                    </a>
+                  </div>
+
+                  <div class="pxn-h2_about_content">
+                    <div class="section_heading">
+                      <span class="sec_sub pxn-fade">About Our Consulting</span>
+                      <h2 class="sec_title pxn-chars-up">Driving Business Success Through Strategy</h2>
+                      <div class="sec_desc pxn-fade" data-delay=".3">We are a results-driven business consulting firm
+                        dedicated to helping
+                        organizations improve performance, optimize operations, and achieve sustainable growth.</div>
+                    </div>
+
+                    <div class="about_key_feature">
+                      <div>
+                        <ul class="pxn_list pxn-fade" data-delay=".3">
+                          <li><i class="pxni-check"></i> Committed to Enhancing</li>
+                          <li><i class="pxni-check"></i> Shaping the Future of Business</li>
+                          <li><i class="pxni-check"></i> Evolving Marketplace</li>
+                        </ul>
+
+                        <div class="pxn_author_signature_2 pxn-fade" data-delay=".4">
+                          <img src="./assets/images/about/h1-signature.png" alt="Signature">
+                          <span class="designation">CEO Co-Founder</span>
+                        </div>
+                      </div>
+
+                      <div class="pxn_counter pxn-fade" data-delay=".5">
+                        <div class="small"></div>
+
+                        <div class="count">
+                          <span class="pxn_counter-prefix"></span>
+                          <span class="pxn_counter-number" data-duration="2000" data-to-value="25"
+                            data-from-value="0">0</span>
+                          <span class="pxn_counter-suffix">+</span>
+                        </div>
+                        <div class="title">Years Experience</div>
+                      </div>
+                    </div>
+
+                    <div class="pxn-fade">
+                      <a href="about.php" class="about_btn pxn-btn-primary">
+                        <span class="btn_text"><span>More Details</span></span>
+                        <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: About Section -->
+<?php endif; /* about */ ?>
+
+        <?php if (section_visible($current_page, 'services')): ?>
+<!-- start: Services Section -->
+        <section class="pxn-h2-services-section section-padding">
+
+          <img src="./assets/images/services/h2-services-left-shape.png" alt="Shape" class="left_shape pxn-fade"
+            data-direction="left" data-delay="1.5">
+          <img src="./assets/images/services/h2-services-right-shape.png" alt="Shape" class="right_shape pxn-fade"
+            data-direction="right" data-delay="1.5">
+
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="pxn-h2_services_wrap">
+                  <div class="section_heading text-center">
+                    <span class="sec_sub pxn-fade">What We Offer</span>
+                    <h2 class="sec_title pxn-chars-up">Innovates Services That Elevate Your Business</h2>
+                  </div>
+
+                  <div class="pxn-h2_services">
+                    <div class="pxn_service_item pxn-fade">
+                      <div class="service_header">
+                        <div class="service_icon">
+                          <i class="pxni-growth"></i>
+                        </div>
+
+                        <div class="service_no">01.</div>
+                      </div>
+                      <div class="service_content">
+                        <h3 class="service_title"><a href="service-details.php">Growth & Expansion <br>Consulting</a>
+                        </h3>
+                        <div class="service_excerpt">Support business scaling, market entry strategies, & expansion
+                          planning...</div>
+
+                        <a href="service-details.php" class="service_btn pxn-btn-primary">
+                          <span class="btn_text"><span>Get Started</span></span>
+                          <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="pxn_service_item pxn-fade" data-delay=".3">
+                      <div class="service_header">
+                        <div class="service_icon">
+                          <i class="pxni-transformation"></i>
+                        </div>
+
+                        <div class="service_no">02.</div>
+                      </div>
+                      <div class="service_content">
+                        <h3 class="service_title"><a href="service-details.php">Digital Transformation
+                            <br>Consulting</a>
+                        </h3>
+                        <div class="service_excerpt">Leverage modern technologies to moder-
+                          nize workflows, improve customer...</div>
+
+                        <a href="service-details.php" class="service_btn pxn-btn-primary">
+                          <span class="btn_text"><span>Get Started</span></span>
+                          <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="pxn_service_item pxn-fade" data-delay=".5">
+                      <div class="service_header">
+                        <div class="service_icon">
+                          <i class="pxni-compliance"></i>
+                        </div>
+
+                        <div class="service_no">03.</div>
+                      </div>
+                      <div class="service_content">
+                        <h3 class="service_title"><a href="service-details.php">Risk Management & <br>Compliance</a>
+                        </h3>
+                        <div class="service_excerpt">Identify potential risks, ensure regulatory compliance, & protect
+                          your
+                          business...</div>
+
+                        <a href="service-details.php" class="service_btn pxn-btn-primary">
+                          <span class="btn_text"><span>Get Started</span></span>
+                          <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="pxn_service_item pxn-fade">
+                      <div class="service_header">
+                        <div class="service_icon">
+                          <i class="pxni-expansion"></i>
+                        </div>
+
+                        <div class="service_no">04</div>
+                      </div>
+                      <div class="service_content">
+                        <h3 class="service_title"><a href="service-details.php">Growth & Expansion Consulting</a></h3>
+                        <div class="service_excerpt">Support business scaling, market entry strategies, & expansion
+                          planning...</div>
+
+                        <a href="service-details.php" class="service_btn pxn-btn-primary">
+                          <span class="btn_text"><span>Get Started</span></span>
+                          <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="pxn_service_item feature pxn-fade" data-delay=".3"
+                      data-bg-image="./assets/images/services/h2-service-bg-img.jpg">
+                      <div class="service_header">
+                        <div class="service_icon">
+                          <i class="pxni-progress"></i>
+                        </div>
+
+                        <div class="service_no">05.</div>
+                      </div>
+                      <div class="service_content">
+                        <h3 class="service_title"><a href="service-details.php">Growth & Expansion <br>Consulting</a>
+                        </h3>
+                        <div class="service_excerpt">Support business scaling, market entry strategies, & expansion
+                          planning...</div>
+
+                        <a href="service-details.php" class="service_btn pxn-btn-primary">
+                          <span class="btn_text"><span>Get Started</span></span>
+                          <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Services Section -->
+<?php endif; /* services */ ?>
+
+        <?php if (section_visible($current_page, 'counter')): ?>
+<!-- start: Counter Section -->
+        <section class="pxn-h2-counter-section overflow-hidden">
+
+          <div class="bg_img pxn-img-parallax" data-bg-image="./assets/images/counter/h2-counter-bg.jpg"></div>
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <div class="pxn-h2_counters_wrap">
+
+                  <div class="pxn_counter_2 pxn-fade">
+                    <div class="title">Total Projects Completed</div>
+
+                    <div class="count">
+                      <span class="pxn_counter-prefix"></span>
+                      <span class="pxn_counter-number" data-duration="2000" data-to-value="90"
+                        data-from-value="0">0</span>
+                      <span class="pxn_counter-suffix">%</span>
+                    </div>
+                  </div>
+
+                  <div class="pxn_counter_2 pxn-fade" data-delay=".3">
+                    <div class="title">Our total Success rate</div>
+
+                    <div class="count">
+                      <span class="pxn_counter-prefix"></span>
+                      <span class="pxn_counter-number" data-duration="2000" data-to-value="324"
+                        data-from-value="0">0</span>
+                      <span class="pxn_counter-suffix">+</span>
+                    </div>
+                  </div>
+
+                  <div class="pxn_counter_2 pxn-fade" data-delay=".5">
+                    <div class="title">Our Active Customers</div>
+
+                    <div class="count">
+                      <span class="pxn_counter-prefix"></span>
+                      <span class="pxn_counter-number" data-duration="2000" data-to-value="69"
+                        data-from-value="0">0</span>
+                      <span class="pxn_counter-suffix">K</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Counter Section -->
+<?php endif; /* counter */ ?>
+
+        <?php if (section_visible($current_page, 'projects')): ?>
+<!-- start: Projects Section -->
+        <section class="pxn-h2-projects-section section-padding overflow-hidden">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <div class="pxn-h2_projects_wrapper">
+                  <div class="section_heading text-center">
+                    <span class="sec_sub pxn-fade">Latest Project</span>
+                    <h2 class="sec_title pxn-chars-up">Business Transformation That Delivers Results</h2>
+                  </div>
+
+                  <div class="pxn-h2_projects_wrap">
+                    <div class="pxn-h2_project_item">
+                      <div class="project_img pxn-hover-btn-wrapper">
+                        <a href="portfolio-details.php">
+                          <div class="pxn-hover-btn-item pxn-img-reveal">
+                            <img src="./assets/images/projects/h1-project-img-1.jpg" alt="Project">
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="project_content">
+                        <div class="project_cat">
+                          <a class="category" href="portfolio-details.php">Strategy</a>,
+                          <a class="category" href="portfolio-details.php">Growth</a>
+                        </div>
+                        <h3 class="project_title"><a href="portfolio-details.php">Business Analytics & Reporting</a>
+                        </h3>
+                      </div>
+                    </div>
+
+                    <div class="pxn-h2_project_item">
+                      <div class="project_img  pxn-hover-btn-wrapper">
+                        <a href="portfolio-details.php">
+                          <div class="pxn-hover-btn-item pxn-img-reveal">
+                            <img src="./assets/images/projects/h1-project-img-2.jpg" alt="Project">
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="project_content">
+                        <div class="project_cat">
+                          <a class="category" href="portfolio-details.php">Strategy</a>,
+                          <a class="category" href="portfolio-details.php">Growth</a>
+                        </div>
+                        <h3 class="project_title"><a href="portfolio-details.php">Sales and Marketing Strategy</a></h3>
+                      </div>
+                    </div>
+
+                    <div class="pxn-h2_project_item">
+                      <div class="project_img pxn-hover-btn-wrapper">
+                        <a href="portfolio-details.php">
+                          <div class="pxn-hover-btn-item pxn-img-reveal">
+
+                            <img src="./assets/images/projects/h1-project-img-3.jpg" alt="Project">
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="project_content">
+                        <div class="project_cat">
+                          <a class="category" href="portfolio-details.php">Strategy</a>,
+                          <a class="category" href="portfolio-details.php">Growth</a>
+                        </div>
+                        <h3 class="project_title"><a href="portfolio-details.php">Business Process Optimization</a>
+                        </h3>
+                      </div>
+                    </div>
+
+                    <div class="pxn-h2_project_item">
+                      <div class="project_img pxn-hover-btn-wrapper">
+                        <a href="portfolio-details.php">
+                          <div class="pxn-hover-btn-item pxn-img-reveal">
+
+                            <img src="./assets/images/projects/h2-project-img-4.jpg" alt="Project">
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="project_content">
+                        <div class="project_cat">
+                          <a class="category" href="portfolio-details.php">Strategy</a>,
+                          <a class="category" href="portfolio-details.php">Growth</a>
+                        </div>
+                        <h3 class="project_title"><a href="portfolio-details.php">Financial Planning & Forecasting</a>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Projects Section -->
+<?php endif; /* projects */ ?>
+
+        <?php if (section_visible($current_page, 'process')): ?>
+<!-- start: Working Process -->
+        <section class="pxn-h2-process-section section-padding"
+          data-bg-image="./assets/images/process/h2-process-bg.png">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="pxn-h2_process_wrap">
+                  <div class="section_heading text-center">
+                    <span class="sec_sub pxn-fade">Our Work Process</span>
+                    <h2 class="sec_title pxn-chars-up">How We Deliver Business Consulting Solutions</h2>
+                  </div>
+
+                  <div class="pxn-h2_process_items">
+                    <div class="pxn_process_item pxn-fade">
+                      <div class="process_step">
+                        Step - 01
+                      </div>
+                      <div class="process_line">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 312 8" fill="none">
+                          <path
+                            d="M-4.07696e-05 3.68213C-4.07696e-05 5.15489 1.19387 6.3488 2.66663 6.3488C4.13939 6.3488 5.33329 5.15489 5.33329 3.68213C5.33329 2.20937 4.13939 1.01546 2.66663 1.01546C1.19387 1.01546 -4.07696e-05 2.20937 -4.07696e-05 3.68213ZM311.02 4.03568C311.215 3.84042 311.215 3.52384 311.02 3.32858L307.838 0.146595C307.643 -0.0486672 307.326 -0.0486672 307.131 0.146595C306.936 0.341857 306.936 0.65844 307.131 0.853702L309.96 3.68213L307.131 6.51056C306.936 6.70582 306.936 7.0224 307.131 7.21766C307.326 7.41293 307.643 7.41293 307.838 7.21766L311.02 4.03568ZM2.66663 3.68213V4.18213H8.5897V3.68213V3.18213H2.66663V3.68213ZM20.4359 3.68213V4.18213H32.282V3.68213V3.18213H20.4359V3.68213ZM44.1282 3.68213V4.18213H55.9743V3.68213V3.18213H44.1282V3.68213ZM67.8205 3.68213V4.18213H79.6666V3.68213V3.18213H67.8205V3.68213ZM91.5128 3.68213V4.18213H103.359V3.68213V3.18213H91.5128V3.68213ZM115.205 3.68213V4.18213H127.051V3.68213V3.18213H115.205V3.68213ZM138.897 3.68213V4.18213H150.744V3.68213V3.18213H138.897V3.68213ZM162.59 3.68213V4.18213H174.436V3.68213V3.18213H162.59V3.68213ZM186.282 3.68213V4.18213H198.128V3.68213V3.18213H186.282V3.68213ZM209.974 3.68213V4.18213H221.821V3.68213V3.18213H209.974V3.68213ZM233.667 3.68213V4.18213H245.513V3.68213V3.18213H233.667V3.68213ZM257.359 3.68213V4.18213H269.205V3.68213V3.18213H257.359V3.68213ZM281.051 3.68213V4.18213H292.897V3.68213V3.18213H281.051V3.68213ZM304.744 3.68213V4.18213H310.667V3.68213V3.18213H304.744V3.68213ZM-4.07696e-05 3.68213C-4.07696e-05 5.15489 1.19387 6.3488 2.66663 6.3488C4.13939 6.3488 5.33329 5.15489 5.33329 3.68213C5.33329 2.20937 4.13939 1.01546 2.66663 1.01546C1.19387 1.01546 -4.07696e-05 2.20937 -4.07696e-05 3.68213ZM311.02 4.03568C311.215 3.84042 311.215 3.52384 311.02 3.32858L307.838 0.146595C307.643 -0.0486672 307.326 -0.0486672 307.131 0.146595C306.936 0.341857 306.936 0.65844 307.131 0.853702L309.96 3.68213L307.131 6.51056C306.936 6.70582 306.936 7.0224 307.131 7.21766C307.326 7.41293 307.643 7.41293 307.838 7.21766L311.02 4.03568ZM2.66663 3.68213V4.18213H8.5897V3.68213V3.18213H2.66663V3.68213ZM20.4359 3.68213V4.18213H32.282V3.68213V3.18213H20.4359V3.68213ZM44.1282 3.68213V4.18213H55.9743V3.68213V3.18213H44.1282V3.68213ZM67.8205 3.68213V4.18213H79.6666V3.68213V3.18213H67.8205V3.68213ZM91.5128 3.68213V4.18213H103.359V3.68213V3.18213H91.5128V3.68213ZM115.205 3.68213V4.18213H127.051V3.68213V3.18213H115.205V3.68213ZM138.897 3.68213V4.18213H150.744V3.68213V3.18213H138.897V3.68213ZM162.59 3.68213V4.18213H174.436V3.68213V3.18213H162.59V3.68213ZM186.282 3.68213V4.18213H198.128V3.68213V3.18213H186.282V3.68213ZM209.974 3.68213V4.18213H221.821V3.68213V3.18213H209.974V3.68213ZM233.667 3.68213V4.18213H245.513V3.68213V3.18213H233.667V3.68213ZM257.359 3.68213V4.18213H269.205V3.68213V3.18213H257.359V3.68213ZM281.051 3.68213V4.18213H292.897V3.68213V3.18213H281.051V3.68213ZM304.744 3.68213V4.18213H310.667V3.68213V3.18213H304.744V3.68213Z"
+                            fill="currentColor" />
+                        </svg>
+                      </div>
+
+                      <div>
+                        <div class="process_content">
+                          <h3 class="process_title">Discovery & Understanding</h3>
+                          <div class="process_desc">We start by learning about your business, goals, challenges, and
+                            market
+                            to
+                            gain</div>
+                        </div>
+                        <div class="process_img">
+                          <img src="./assets/images/process/h2-process-img-1.jpg" alt="Process">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="pxn_process_item pxn-fade" data-delay=".3">
+                      <div class="process_step">
+                        Step - 02
+                      </div>
+                      <div class="process_line">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 312 8" fill="none">
+                          <path
+                            d="M-4.07696e-05 3.68213C-4.07696e-05 5.15489 1.19387 6.3488 2.66663 6.3488C4.13939 6.3488 5.33329 5.15489 5.33329 3.68213C5.33329 2.20937 4.13939 1.01546 2.66663 1.01546C1.19387 1.01546 -4.07696e-05 2.20937 -4.07696e-05 3.68213ZM311.02 4.03568C311.215 3.84042 311.215 3.52384 311.02 3.32858L307.838 0.146595C307.643 -0.0486672 307.326 -0.0486672 307.131 0.146595C306.936 0.341857 306.936 0.65844 307.131 0.853702L309.96 3.68213L307.131 6.51056C306.936 6.70582 306.936 7.0224 307.131 7.21766C307.326 7.41293 307.643 7.41293 307.838 7.21766L311.02 4.03568ZM2.66663 3.68213V4.18213H8.5897V3.68213V3.18213H2.66663V3.68213ZM20.4359 3.68213V4.18213H32.282V3.68213V3.18213H20.4359V3.68213ZM44.1282 3.68213V4.18213H55.9743V3.68213V3.18213H44.1282V3.68213ZM67.8205 3.68213V4.18213H79.6666V3.68213V3.18213H67.8205V3.68213ZM91.5128 3.68213V4.18213H103.359V3.68213V3.18213H91.5128V3.68213ZM115.205 3.68213V4.18213H127.051V3.68213V3.18213H115.205V3.68213ZM138.897 3.68213V4.18213H150.744V3.68213V3.18213H138.897V3.68213ZM162.59 3.68213V4.18213H174.436V3.68213V3.18213H162.59V3.68213ZM186.282 3.68213V4.18213H198.128V3.68213V3.18213H186.282V3.68213ZM209.974 3.68213V4.18213H221.821V3.68213V3.18213H209.974V3.68213ZM233.667 3.68213V4.18213H245.513V3.68213V3.18213H233.667V3.68213ZM257.359 3.68213V4.18213H269.205V3.68213V3.18213H257.359V3.68213ZM281.051 3.68213V4.18213H292.897V3.68213V3.18213H281.051V3.68213ZM304.744 3.68213V4.18213H310.667V3.68213V3.18213H304.744V3.68213ZM-4.07696e-05 3.68213C-4.07696e-05 5.15489 1.19387 6.3488 2.66663 6.3488C4.13939 6.3488 5.33329 5.15489 5.33329 3.68213C5.33329 2.20937 4.13939 1.01546 2.66663 1.01546C1.19387 1.01546 -4.07696e-05 2.20937 -4.07696e-05 3.68213ZM311.02 4.03568C311.215 3.84042 311.215 3.52384 311.02 3.32858L307.838 0.146595C307.643 -0.0486672 307.326 -0.0486672 307.131 0.146595C306.936 0.341857 306.936 0.65844 307.131 0.853702L309.96 3.68213L307.131 6.51056C306.936 6.70582 306.936 7.0224 307.131 7.21766C307.326 7.41293 307.643 7.41293 307.838 7.21766L311.02 4.03568ZM2.66663 3.68213V4.18213H8.5897V3.68213V3.18213H2.66663V3.68213ZM20.4359 3.68213V4.18213H32.282V3.68213V3.18213H20.4359V3.68213ZM44.1282 3.68213V4.18213H55.9743V3.68213V3.18213H44.1282V3.68213ZM67.8205 3.68213V4.18213H79.6666V3.68213V3.18213H67.8205V3.68213ZM91.5128 3.68213V4.18213H103.359V3.68213V3.18213H91.5128V3.68213ZM115.205 3.68213V4.18213H127.051V3.68213V3.18213H115.205V3.68213ZM138.897 3.68213V4.18213H150.744V3.68213V3.18213H138.897V3.68213ZM162.59 3.68213V4.18213H174.436V3.68213V3.18213H162.59V3.68213ZM186.282 3.68213V4.18213H198.128V3.68213V3.18213H186.282V3.68213ZM209.974 3.68213V4.18213H221.821V3.68213V3.18213H209.974V3.68213ZM233.667 3.68213V4.18213H245.513V3.68213V3.18213H233.667V3.68213ZM257.359 3.68213V4.18213H269.205V3.68213V3.18213H257.359V3.68213ZM281.051 3.68213V4.18213H292.897V3.68213V3.18213H281.051V3.68213ZM304.744 3.68213V4.18213H310.667V3.68213V3.18213H304.744V3.68213Z"
+                            fill="currentColor" />
+                        </svg>
+                      </div>
+
+                      <div>
+                        <div class="process_content">
+                          <h3 class="process_title">Research & Analysis</h3>
+                          <div class="process_desc">Our team analyzes data, processes, and competitors to identify
+                            opportunities.</div>
+                        </div>
+                        <div class="process_img">
+                          <img src="./assets/images/process/h2-process-img-2.jpg" alt="Process">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="pxn_process_item pxn-fade" data-delay=".5">
+                      <div class="process_step">
+                        Step - 03
+                      </div>
+                      <div class="process_line">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 312 8" fill="none">
+                          <path
+                            d="M-4.07696e-05 3.68213C-4.07696e-05 5.15489 1.19387 6.3488 2.66663 6.3488C4.13939 6.3488 5.33329 5.15489 5.33329 3.68213C5.33329 2.20937 4.13939 1.01546 2.66663 1.01546C1.19387 1.01546 -4.07696e-05 2.20937 -4.07696e-05 3.68213ZM311.02 4.03568C311.215 3.84042 311.215 3.52384 311.02 3.32858L307.838 0.146595C307.643 -0.0486672 307.326 -0.0486672 307.131 0.146595C306.936 0.341857 306.936 0.65844 307.131 0.853702L309.96 3.68213L307.131 6.51056C306.936 6.70582 306.936 7.0224 307.131 7.21766C307.326 7.41293 307.643 7.41293 307.838 7.21766L311.02 4.03568ZM2.66663 3.68213V4.18213H8.5897V3.68213V3.18213H2.66663V3.68213ZM20.4359 3.68213V4.18213H32.282V3.68213V3.18213H20.4359V3.68213ZM44.1282 3.68213V4.18213H55.9743V3.68213V3.18213H44.1282V3.68213ZM67.8205 3.68213V4.18213H79.6666V3.68213V3.18213H67.8205V3.68213ZM91.5128 3.68213V4.18213H103.359V3.68213V3.18213H91.5128V3.68213ZM115.205 3.68213V4.18213H127.051V3.68213V3.18213H115.205V3.68213ZM138.897 3.68213V4.18213H150.744V3.68213V3.18213H138.897V3.68213ZM162.59 3.68213V4.18213H174.436V3.68213V3.18213H162.59V3.68213ZM186.282 3.68213V4.18213H198.128V3.68213V3.18213H186.282V3.68213ZM209.974 3.68213V4.18213H221.821V3.68213V3.18213H209.974V3.68213ZM233.667 3.68213V4.18213H245.513V3.68213V3.18213H233.667V3.68213ZM257.359 3.68213V4.18213H269.205V3.68213V3.18213H257.359V3.68213ZM281.051 3.68213V4.18213H292.897V3.68213V3.18213H281.051V3.68213ZM304.744 3.68213V4.18213H310.667V3.68213V3.18213H304.744V3.68213ZM-4.07696e-05 3.68213C-4.07696e-05 5.15489 1.19387 6.3488 2.66663 6.3488C4.13939 6.3488 5.33329 5.15489 5.33329 3.68213C5.33329 2.20937 4.13939 1.01546 2.66663 1.01546C1.19387 1.01546 -4.07696e-05 2.20937 -4.07696e-05 3.68213ZM311.02 4.03568C311.215 3.84042 311.215 3.52384 311.02 3.32858L307.838 0.146595C307.643 -0.0486672 307.326 -0.0486672 307.131 0.146595C306.936 0.341857 306.936 0.65844 307.131 0.853702L309.96 3.68213L307.131 6.51056C306.936 6.70582 306.936 7.0224 307.131 7.21766C307.326 7.41293 307.643 7.41293 307.838 7.21766L311.02 4.03568ZM2.66663 3.68213V4.18213H8.5897V3.68213V3.18213H2.66663V3.68213ZM20.4359 3.68213V4.18213H32.282V3.68213V3.18213H20.4359V3.68213ZM44.1282 3.68213V4.18213H55.9743V3.68213V3.18213H44.1282V3.68213ZM67.8205 3.68213V4.18213H79.6666V3.68213V3.18213H67.8205V3.68213ZM91.5128 3.68213V4.18213H103.359V3.68213V3.18213H91.5128V3.68213ZM115.205 3.68213V4.18213H127.051V3.68213V3.18213H115.205V3.68213ZM138.897 3.68213V4.18213H150.744V3.68213V3.18213H138.897V3.68213ZM162.59 3.68213V4.18213H174.436V3.68213V3.18213H162.59V3.68213ZM186.282 3.68213V4.18213H198.128V3.68213V3.18213H186.282V3.68213ZM209.974 3.68213V4.18213H221.821V3.68213V3.18213H209.974V3.68213ZM233.667 3.68213V4.18213H245.513V3.68213V3.18213H233.667V3.68213ZM257.359 3.68213V4.18213H269.205V3.68213V3.18213H257.359V3.68213ZM281.051 3.68213V4.18213H292.897V3.68213V3.18213H281.051V3.68213ZM304.744 3.68213V4.18213H310.667V3.68213V3.18213H304.744V3.68213Z"
+                            fill="currentColor" />
+                        </svg>
+                      </div>
+
+                      <div>
+                        <div class="process_content">
+                          <h3 class="process_title">Strategy Development</h3>
+                          <div class="process_desc">We create a tailored, actionable strategy aligned with your
+                            objectives &
+                            growth plans.</div>
+                        </div>
+                        <div class="process_img">
+                          <img src="./assets/images/process/h2-process-img-3.jpg" alt="Process">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Working Process -->
+<?php endif; /* process */ ?>
+
+        <?php if (section_visible($current_page, 'team')): ?>
+<!-- start: Team Section -->
+        <section class="pxn-h2-team-section section-padding">
+          <img src="./assets/images/team/h2-team-shape-left.png" alt="Shape" class="left_shape pxn-fade"
+            data-direction="left" data-delay="1.5">
+          <img src="./assets/images/team/h2-team-shape-right.png" alt="Shape" class="right_shape pxn-fade"
+            data-direction="right" data-delay="1.5">
+
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="pxn-h2_team_wrap">
+                  <div class="section_heading text-center">
+                    <span class="sec_sub pxn-fade">Meet the Team</span>
+                    <h2 class="sec_title pxn-chars-up">Meet Our Leadership and Consulting Team</h2>
+                  </div>
+
+                  <div class="team_wrapper">
+                    <div class="pxn-h2_team_cta pxn-fade">
+                      <div class="cta_content">
+                        <div class="cta_sub">Build Your Career</div>
+                        <h3 class="cta_title">Join our team & create a better tomorrow.</h3>
+                        <div class="cta_desc">Submit your CV and portfolio for consideration.</div>
+                      </div>
+
+
+                      <a href="contact.php" class="cta_btn pxn-btn-primary">
+                        <span class="btn_text"><span>Apply Now</span></span>
+                        <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
+                      </a>
+                    </div>
+
+                    <div class="pxn-h1_team_member style-2 pxn-fade" data-delay=".3">
+                      <div class="member_image">
+                        <img src="./assets/images/team/h1-team-img-3.jpg" alt="Team">
+                      </div>
+                      <div class="member_content">
+                        <div class="designation">Brand Manager</div>
+                        <h3 class="name">Robert B. Williams</h3>
+
+                        <ul class="pxn_socials">
+                          <li>
+                            <span class="share"><i class="pxni-share"></i></span>
+
+                            <ul>
+                              <li><a class="icon" href="https://facebook.com" target="_blank"><i
+                                    class="pxni-facebook"></i></a></li>
+                              <li><a class="icon" href="https://instagram.com" target="_blank"><i
+                                    class="pxni-instagram"></i></a></li>
+                              <li><a class="icon" href="https://linkedin.com" target="_blank"><i
+                                    class="pxni-linkedin"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="pxn-h1_team_member style-2 pxn-fade" data-delay=".5">
+                      <div class="member_image">
+                        <img src="./assets/images/team/h1-team-img-2.jpg" alt="Team">
+                      </div>
+                      <div class="member_content">
+                        <div class="designation">Co-Founder</div>
+                        <h3 class="name">Elina Blackwood</h3>
+
+                        <ul class="pxn_socials">
+                          <li>
+                            <span class="share"><i class="pxni-share"></i></span>
+
+                            <ul>
+                              <li><a class="icon" href="https://facebook.com" target="_blank"><i
+                                    class="pxni-facebook"></i></a></li>
+                              <li><a class="icon" href="https://instagram.com" target="_blank"><i
+                                    class="pxni-instagram"></i></a></li>
+                              <li><a class="icon" href="https://linkedin.com" target="_blank"><i
+                                    class="pxni-linkedin"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="pxn-h1_team_member style-2 pxn-fade" data-delay=".7">
+                      <div class="member_image">
+                        <img src="./assets/images/team/h1-team-img-4.jpg" alt="Team">
+                      </div>
+                      <div class="member_content">
+                        <div class="designation">Product Owner</div>
+                        <h3 class="name">Sarah Williams</h3>
+
+                        <ul class="pxn_socials">
+                          <li>
+                            <span class="share"><i class="pxni-share"></i></span>
+
+                            <ul>
+                              <li><a class="icon" href="https://facebook.com" target="_blank"><i
+                                    class="pxni-facebook"></i></a></li>
+                              <li><a class="icon" href="https://instagram.com" target="_blank"><i
+                                    class="pxni-instagram"></i></a></li>
+                              <li><a class="icon" href="https://linkedin.com" target="_blank"><i
+                                    class="pxni-linkedin"></i></a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Team Section -->
+<?php endif; /* team */ ?>
+
+        <?php if (section_visible($current_page, 'faq')): ?>
+<!-- start: FAQ Section -->
+        <section class="pxn-h2-faq-section section-padding">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="pxn-h2_faq_wrap">
+                  <div class="faq_content">
+                    <div class="section_heading">
+                      <span class="sec_sub pxn-fade">Frequently question</span>
+                      <h2 class="sec_title pxn-chars-up">Common Questions About Our Services</h2>
+                    </div>
+
+                    <div class="pxn_accordion pxn-fade" data-delay=".3" id="pxnAccordion">
+                      <div class="pxn_accordion_item">
+                        <button class="accordion_question" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#pxnAccordion1" aria-expanded="true" aria-controls="pxnAccordion1">
+                          <span class="accordion_no">01</span>
+                          What types of businesses do you work with?
+                        </button>
+                        <div id="pxnAccordion1" class="collapse show" data-bs-parent="#pxnAccordion">
+                          <div class="accordion-body">
+                            <div class="accordion_answer">
+                              We assess your business, identify challenges, and deliver data-driven, actionable
+                              solutions.
+                              Project timelines vary, but most engagements range from a few weeks to...
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pxn_accordion_item">
+                        <button class="accordion_question collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#pxnAccordion2" aria-expanded="false" aria-controls="pxnAccordion2">
+                          <span class="accordion_no">02</span>
+                          How does your consulting process work?
+                        </button>
+                        <div id="pxnAccordion2" class="collapse" data-bs-parent="#pxnAccordion">
+                          <div class="accordion-body">
+                            <div class="accordion_answer">
+                              We assess your business, identify challenges, and deliver data-driven, actionable
+                              solutions.
+                              Project timelines vary, but most engagements range from a few weeks to...
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pxn_accordion_item">
+                        <button class="accordion_question collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#pxnAccordion3" aria-expanded="false" aria-controls="pxnAccordion3">
+                          <span class="accordion_no">03</span>
+                          Do you offer customized consulting solutions?
+                        </button>
+                        <div id="pxnAccordion3" class="collapse" data-bs-parent="#pxnAccordion">
+                          <div class="accordion-body">
+                            <div class="accordion_answer">
+                              We assess your business, identify challenges, and deliver data-driven, actionable
+                              solutions.
+                              Project timelines vary, but most engagements range from a few weeks to...
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pxn_accordion_item">
+                        <button class="accordion_question collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#pxnAccordion4" aria-expanded="false" aria-controls="pxnAccordion4">
+                          <span class="accordion_no">04</span>
+                          How do you measure success?
+                        </button>
+                        <div id="pxnAccordion4" class="collapse" data-bs-parent="#pxnAccordion">
+                          <div class="accordion-body">
+                            <div class="accordion_answer">
+                              We assess your business, identify challenges, and deliver data-driven, actionable
+                              solutions.
+                              Project timelines vary, but most engagements range from a few weeks to...
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pxn_faq_cta pxn-fade" data-delay=".3">
+                    <div class="cta_img">
+                      <img src="./assets/images/faq/h2-faq-cta-img.jpg" alt="FAQ">
+                    </div>
+                    <div class="cta_content">
+                      <h3 class="cta_title">Do You Have any Question?</h3>
+                      <a href="tel:+880123456789" class="cta_action">+880 (123) 456 789</a>
+
+                      <a href="contact.php" class="cta_btn pxn-btn-primary">
+                        <span class="btn_text"><span>Contact Us</span></span>
+                        <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pxn-h1_client_wrapper">
+                  <div class="pxn_divider pxn-fade"><span>Trusted by 500+ Brands & Companies</span></div>
+
+                  <div class="pxn-h1_client_carousel swiper pxn-fade">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide pxn_client_logo style-2">
+                        <a href="#" class="pxn_client_logo_inner">
+                          <img src="./assets/images/clients/client-logo-1.png" alt="Client">
+                        </a>
+                      </div>
+                      <div class="swiper-slide pxn_client_logo style-2">
+                        <a href="#" class="pxn_client_logo_inner">
+                          <img src="./assets/images/clients/client-logo-2.png" alt="Client">
+                        </a>
+                      </div>
+                      <div class="swiper-slide pxn_client_logo style-2">
+                        <a href="#" class="pxn_client_logo_inner">
+                          <img src="./assets/images/clients/client-logo-3.png" alt="Client">
+                        </a>
+                      </div>
+                      <div class="swiper-slide pxn_client_logo style-2">
+                        <a href="#" class="pxn_client_logo_inner">
+                          <img src="./assets/images/clients/client-logo-4.png" alt="Client">
+                        </a>
+                      </div>
+                      <div class="swiper-slide pxn_client_logo style-2">
+                        <a href="#" class="pxn_client_logo_inner">
+                          <img src="./assets/images/clients/client-logo-5.png" alt="Client">
+                        </a>
+                      </div>
+                      <div class="swiper-slide pxn_client_logo style-2">
+                        <a href="#" class="pxn_client_logo_inner">
+                          <img src="./assets/images/clients/client-logo-6.png" alt="Client">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: FAQ Section -->
+<?php endif; /* faq */ ?>
+
+        <?php if (section_visible($current_page, 'testimonial')): ?>
+<!-- start: Testimonial Section -->
+        <section class="pxn-h2-testimonial-section section-padding overflow-hidden"
+          data-bg-image="./assets/images/testimonial/h2-testimonial-bg.png">
+          <img src="./assets/images/testimonial/h2-tesitmonial-bg-shape.png" alt="Shape" class="bg_shape pxn-fade"
+            data-direction="right" data-delay="1.5">
+
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="pxn-h2_testimonial_wrap">
+                  <div class="section_heading text-center">
+                    <span class="sec_sub pxn-fade">Clients Feedback</span>
+                    <h2 class="sec_title pxn-chars-up">Client Experiences That Speak for Themselves</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container testimonialContainer">
+            <div class="row">
+              <div class="col">
+                <div class="pxn-h2_testimonial_wrap pxn-fade" data-direction="right">
+                  <div class="pxn-h2_testimonial_carousel swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide pxn_testimonial style-2">
+                        <div class="pxn_testimonial_inner">
+                          <div class="testimonial_header">
+                            <div class="testimonial_quote">
+                              <i class="pxni-quote-left"></i>
+                            </div>
+
+                            <div class="pxn-rating-wrapper" content="4.5" role="img" aria-label="Rated 4.5 out of 5">
+                              <div class="pxn-rating-wrapper-inner">
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked" style="--r-rating-icon-marked-width: 50%;">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <span class="rating-label">5.0 out of 4.5</span>
+                            </div>
+                          </div>
+
+                          <div class="testimonial_text">
+                            “Working with this consulting team was a game-changer for our business. Their strategic
+                            insights, clear communication and practical recommendations helped..”
+                          </div>
+
+                          <div class="testimonial_author">
+                            <div class="author_img">
+                              <img src="./assets/images/testimonial/h1-testimonial-author-img-1.jpg" alt="Author">
+                            </div>
+                            <div class="author_info">
+                              <div class="designation">Business Analyst</div>
+                              <div class="name">Jonathan William</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide pxn_testimonial style-2">
+                        <div class="pxn_testimonial_inner">
+                          <div class="testimonial_header">
+                            <div class="testimonial_quote">
+                              <i class="pxni-quote-left"></i>
+                            </div>
+
+                            <div class="pxn-rating-wrapper" content="4.5" role="img" aria-label="Rated 4.5 out of 5">
+                              <div class="pxn-rating-wrapper-inner">
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked" style="--r-rating-icon-marked-width: 50%;">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <span class="rating-label">5.0 out of 4.5</span>
+                            </div>
+                          </div>
+
+                          <div class="testimonial_text">
+                            “The consultants took the time to understand our challenges and delivered solutions tailored
+                            to
+                            our goals. Their hands-on support and structured approach made..”
+                          </div>
+
+                          <div class="testimonial_author">
+                            <div class="author_img">
+                              <img src="./assets/images/testimonial/h1-testimonial-author-img-3.jpg" alt="Author">
+                            </div>
+                            <div class="author_info">
+                              <div class="designation">Board Advisor</div>
+                              <div class="name">Emma Johnson</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide pxn_testimonial style-2">
+                        <div class="pxn_testimonial_inner">
+                          <div class="testimonial_header">
+                            <div class="testimonial_quote">
+                              <i class="pxni-quote-left"></i>
+                            </div>
+
+                            <div class="pxn-rating-wrapper" content="4.5" role="img" aria-label="Rated 4.5 out of 5">
+                              <div class="pxn-rating-wrapper-inner">
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked" style="--r-rating-icon-marked-width: 50%;">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <span class="rating-label">5.0 out of 4.5</span>
+                            </div>
+                          </div>
+
+                          <div class="testimonial_text">
+                            “From initial analysis to execution,
+                            their expertise and professionalism were evident at every stage. We gained clarity,
+                            confidence
+                            and a strong roadmap that..”
+                          </div>
+
+                          <div class="testimonial_author">
+                            <div class="author_img">
+                              <img src="./assets/images/testimonial/h1-testimonial-author-img-2.jpg" alt="Author">
+                            </div>
+                            <div class="author_info">
+                              <div class="designation">Growth Strategist</div>
+                              <div class="name">Alexander James</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide pxn_testimonial style-2">
+                        <div class="pxn_testimonial_inner">
+                          <div class="testimonial_header">
+                            <div class="testimonial_quote">
+                              <i class="pxni-quote-left"></i>
+                            </div>
+
+                            <div class="pxn-rating-wrapper" content="4.5" role="img" aria-label="Rated 4.5 out of 5">
+                              <div class="pxn-rating-wrapper-inner">
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                                <div class="r-icon">
+                                  <div class="r-icon-wrapper r-icon-marked" style="--r-rating-icon-marked-width: 50%;">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                  <div class="r-icon-wrapper r-icon-unmarked">
+                                    <i aria-hidden="true" class="pxni-star"></i>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <span class="rating-label">5.0 out of 4.5</span>
+                            </div>
+                          </div>
+
+                          <div class="testimonial_text">
+                            “Their business consulting services provided measurable results & long-term value. We
+                            appreciated their data-driven insights,respon- siveness, and commitment..”
+                          </div>
+
+                          <div class="testimonial_author">
+                            <div class="author_img">
+                              <img src="./assets/images/testimonial/h1-testimonial-author-img-4.jpg" alt="Author">
+                            </div>
+                            <div class="author_info">
+                              <div class="designation">Growth Consultant</div>
+                              <div class="name">David Richardson</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="pxn_slider-pagination justify-content-center"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Testimonial Section -->
+<?php endif; /* testimonial */ ?>
+
+        <?php if (section_visible($current_page, 'blog')): ?>
+<!-- start: Blog Section -->
+        <section class="pxn-h2-blog-section section-padding">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="pxn-h2_blog_wrap">
+                  <div class="section_heading">
+                    <div class="heading_text">
+                      <span class="sec_sub pxn-fade">Latest Blog Post</span>
+                      <h2 class="sec_title pxn-chars-up">Latest Insights from Our Consultants</h2>
+                    </div>
+
+                    <div class="pxn-fade d-none d-lg-inline-flex" data-delay=".3">
+                      <a href="blog.php" class="blog_more_btn pxn-btn-primary">
+                        <span class="btn_text"><span>View All Blog</span></span>
+                        <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="pxn-h2_blog_posts">
+                    <article class="pxn_blog_post_2 pxn-fade">
+                      <div class="blog_image">
+                        <a href="blog-details.php">
+                          <img src="./assets/images/blog/h2-blog-img-1.jpg" alt="Blog">
+                        </a>
+                      </div>
+                      <div class="blog_content">
+                        <a href="blog-details.php" class="blog_category">Business</a>
+
+                        <h3 class="blog_title"><a href="blog-details.php">How Strategic Planning Drives Long-Term
+                            Business Growth</a></h3>
+
+                        <a href="blog.php" class="blog_btn pxn-btn-text-inline">
+                          <span class="btn_text"><span>Read More</span></span>
+                          <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
+                        </a>
+
+
+                        <div class="blog_date">
+                          <div class="blog_date_inner">
+                            <span class="day">06</span>
+                            <span class="month_year">Oct 26</span>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="pxn_blog_post_2 pxn-fade" data-delay=".3">
+                      <div class="blog_image">
+                        <a href="blog-details.php">
+                          <img src="./assets/images/blog/h2-blog-img-2.jpg" alt="Blog">
+                        </a>
+                      </div>
+                      <div class="blog_content">
+                        <a href="blog-details.php" class="blog_category">Innovation</a>
+
+                        <h3 class="blog_title"><a href="blog-details.php">Data-Driven Decisions: Turning Insights Into
+                            Action</a></h3>
+
+                        <a href="blog.php" class="blog_btn pxn-btn-text-inline">
+                          <span class="btn_text"><span>Read More</span></span>
+                          <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
+                        </a>
+
+
+                        <div class="blog_date">
+                          <div class="blog_date_inner">
+                            <span class="day">29</span>
+                            <span class="month_year">Oct 26</span>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="pxn_blog_post_2 pxn-fade" data-delay=".5">
+                      <div class="blog_image">
+                        <a href="blog-details.php">
+                          <img src="./assets/images/blog/h2-blog-img-3.jpg" alt="Blog">
+                        </a>
+                      </div>
+                      <div class="blog_content">
+                        <a href="blog-details.php" class="blog_category">Management</a>
+
+                        <h3 class="blog_title"><a href="blog-details.php">Why Modern Businesses Need Agile Consulting
+                            Models</a></h3>
+
+                        <a href="blog.php" class="blog_btn pxn-btn-text-inline">
+                          <span class="btn_text"><span>Read More</span></span>
+                          <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
+                        </a>
+
+
+                        <div class="blog_date">
+                          <div class="blog_date_inner">
+                            <span class="day">17</span>
+                            <span class="month_year">Oct 26</span>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="more_blog_buttons text-center d-lg-none pxn-fade">
+                    <a href="blog.php" class="blog_more_btn pxn-btn-primary">
+                      <span class="btn_text"><span>View All Blog</span></span>
+                      <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Blog Section -->
+<?php endif; /* blog */ ?>
+      </main>
+
+      <?php if (section_visible('global', 'footer')): ?>
+<!-- start: Footer -->
+      <footer class="pxn-footer pxn-footer-2 overflow-hidden" data-bg-image="./assets/images/footer/h1-footer-bg.png">
+        <div class="footer_widgets">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="footer_widgets_wrap">
+                  <div class="pxn_footer_widget footer_info_widget">
+                    <div class="footer_logo">
+                      <a href="index.php" class="logo"><img src="./assets/images/logos/primary-logo.png"
+                          alt="LOGO"></a>
+                    </div>
+                    <div class="footer_desc">Refresh your skills, our team of experienced
+                      instructors will guide you every step the
+                      way. Our comprehensive ..</div>
+
+                    <div class="pxn_footer_subscription">
+                      <input type="email" name="s_email" id="s_email" placeholder="Enter your email">
+                      <button type="submit"><i class="pxni-send"></i></button>
+                    </div>
+
+                    <ul class="pxn_socials_2 footer_socials">
+                      <li><a class="social" href="https://facebook.com/" target="_blank"><i
+                            class="pxni-facebook"></i></a>
+                      </li>
+                      <li><a class="social" href="https://x.com/" target="_blank"><i class="pxni-x-twitter"></i></a>
+                      </li>
+                      <li><a class="social" href="https://linkedin.com/" target="_blank"><i
+                            class="pxni-linkedin"></i></a>
+                      </li>
+                      <li><a class="social" href="https://instagram.com/" target="_blank"><i
+                            class="pxni-instagram"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="footer_widgets_inner">
+                    <div class="pxn_footer_widget widget-nav-menu">
+                      <h2 class="footer_title">Our Services</h2>
+
+                      <ul>
+                        <li><a href="service-details.php">Business Process</a></li>
+                        <li><a href="service-details.php">Financial Management</a></li>
+                        <li><a href="service-details.php">Market Research</a></li>
+                        <li><a href="service-details.php">Change Management</a></li>
+                        <li><a href="service-details.php">Market Research</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="pxn_footer_widget widget-nav-menu">
+                      <h2 class="footer_title">Resources</h2>
+
+                      <ul>
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="portfolios.php">Our Portfolio</a></li>
+                        <li><a href="blog.php">Blog Post</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
+                        <li><a href="pricing.php">Pricing Page</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="pxn_footer_widget footer_contact_info">
+                      <h2 class="footer_title">Our Offices</h2>
+
+                      <ul>
+                        <li>
+                          <span class="label">Headquarters- USA</span>
+                          <div class="text">Seattle (major city in the state Washington).</div>
+                        </li>
+                        <li>
+                          <span class="label">Operations - China</span>
+                          <div class="text">Shanghai (major global financial hub & China's largest cities)</div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="pxn_footer_widget footer_gallery">
+                      <h2 class="footer_title">Our Gallery</h2>
+
+                      <div class="gallery_wrap">
+                        <a class="gallery_item glightbox" href="./assets/images/gallery/h2-gallery-large-img-1.webp"
+                          data-gallery="pxn_gallery">
+                          <img src="./assets/images/gallery/h2-gallery-thumb-img-1.jpg" alt="image" />
+                        </a>
+                        <a class="gallery_item glightbox" href="./assets/images/gallery/h2-gallery-large-img-2.webp"
+                          data-gallery="pxn_gallery">
+                          <img src="./assets/images/gallery/h2-gallery-thumb-img-2.jpg" alt="image" />
+                        </a>
+                        <a class="gallery_item glightbox" href="./assets/images/gallery/h2-gallery-large-img-3.webp"
+                          data-gallery="pxn_gallery">
+                          <img src="./assets/images/gallery/h2-gallery-thumb-img-3.jpg" alt="image" />
+                        </a>
+                        <a class="gallery_item glightbox" href="./assets/images/gallery/h2-gallery-large-img-4.webp"
+                          data-gallery="pxn_gallery">
+                          <img src="./assets/images/gallery/h2-gallery-thumb-img-4.jpg" alt="image" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer_bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="footer_bottom_wrap d-flex flex-wrap align-items-center justify-content-center">
+                  <div class="pxn_copyright_text">&copy; <span>2026</span> Rovix. All Rights Reserved.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end: Footer -->
+<?php endif; /* footer */ ?>
+
+    </div> <!-- end: smooth-content -->
+  </div> <!-- end: smooth-wrapper -->
+
+  <!-- JS here -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/gsap-scroll-trigger.min.js"></script>
+  <script src="assets/js/gsap-scroll-to-plugin.min.js"></script>
+  <script src="assets/js/gsap-scroll-smoother.js"></script>
+  <script src="assets/js/gsap-split-text.min.js"></script>
+
+  <script src="assets/js/meanmenu.min.js"></script>
+  <script src="assets/js/nice-select.min.js"></script>
+  <script src="assets/js/backtotop.min.js"></script>
+  <script src="assets/js/swiper.min.js"></script>
+  <script src="assets/js/masonry.pkgd.min.js"></script>
+  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/js/glightbox.min.js"></script>
+  <script src="assets/js/charts.min.js"></script>
+  <script src="assets/js/leaflet.min.js"></script>
+
+  <!-- custom script -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

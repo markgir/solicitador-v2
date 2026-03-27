@@ -15,59 +15,61 @@ $editedContent = $db->query("SELECT COUNT(*) FROM content WHERE content_value IS
 include __DIR__ . '/includes/header.php';
 ?>
 
-<h2 class="mb-4">Dashboard</h2>
-
-<div class="row mb-4">
-    <div class="col-md-3">
-        <div class="card text-bg-primary mb-3">
-            <div class="card-body">
-                <h5 class="card-title"><?= count($pages) ?></h5>
-                <p class="card-text mb-0">Páginas</p>
+<!-- Stats row -->
+<div class="row g-3 mb-4">
+    <div class="col-6 col-lg-3">
+        <div class="stat-card">
+            <div class="stat-icon pages"><i class="bi bi-file-earmark-text"></i></div>
+            <div>
+                <div class="stat-value"><?= count($pages) ?></div>
+                <div class="stat-label">Páginas</div>
             </div>
         </div>
     </div>
-    <div class="col-md-3">
-        <div class="card text-bg-success mb-3">
-            <div class="card-body">
-                <h5 class="card-title"><?= $totalSections ?></h5>
-                <p class="card-text mb-0">Secções</p>
+    <div class="col-6 col-lg-3">
+        <div class="stat-card">
+            <div class="stat-icon sections"><i class="bi bi-layout-text-sidebar"></i></div>
+            <div>
+                <div class="stat-value"><?= $totalSections ?></div>
+                <div class="stat-label">Secções</div>
             </div>
         </div>
     </div>
-    <div class="col-md-3">
-        <div class="card text-bg-warning mb-3">
-            <div class="card-body">
-                <h5 class="card-title"><?= $hiddenSections ?></h5>
-                <p class="card-text mb-0">Secções Ocultas</p>
+    <div class="col-6 col-lg-3">
+        <div class="stat-card">
+            <div class="stat-icon hidden"><i class="bi bi-eye-slash"></i></div>
+            <div>
+                <div class="stat-value"><?= $hiddenSections ?></div>
+                <div class="stat-label">Secções Ocultas</div>
             </div>
         </div>
     </div>
-    <div class="col-md-3">
-        <div class="card text-bg-info mb-3">
-            <div class="card-body">
-                <h5 class="card-title"><?= $editedContent ?> / <?= $totalContent ?></h5>
-                <p class="card-text mb-0">Conteúdos Editados</p>
+    <div class="col-6 col-lg-3">
+        <div class="stat-card">
+            <div class="stat-icon content"><i class="bi bi-check2-circle"></i></div>
+            <div>
+                <div class="stat-value"><?= $editedContent ?><span class="stat-fraction"> / <?= $totalContent ?></span></div>
+                <div class="stat-label">Conteúdos Editados</div>
             </div>
         </div>
     </div>
 </div>
 
-<h4 class="mb-3">Páginas</h4>
-<div class="row">
+<!-- Pages grid -->
+<h3 class="section-heading-sm">Páginas</h3>
+<div class="row g-3">
     <?php foreach ($pages as $page): ?>
-    <div class="col-md-4 col-lg-3 mb-3">
-        <div class="card card-page h-100">
-            <div class="card-body">
-                <h6 class="card-title"><?= htmlspecialchars(page_label($page), ENT_QUOTES, 'UTF-8') ?></h6>
-                <p class="text-muted small mb-2"><?= htmlspecialchars($page, ENT_QUOTES, 'UTF-8') ?>.php</p>
-                <div class="d-flex gap-2">
-                    <a href="sections.php?page=<?= urlencode($page) ?>" class="btn btn-sm btn-outline-primary">
-                        <i class="bi bi-eye"></i> Secções
-                    </a>
-                    <a href="content.php?page=<?= urlencode($page) ?>" class="btn btn-sm btn-outline-success">
-                        <i class="bi bi-pencil"></i> Conteúdos
-                    </a>
-                </div>
+    <div class="col-6 col-md-4 col-xl-3">
+        <div class="page-card">
+            <div class="page-card-title"><?= htmlspecialchars(page_label($page), ENT_QUOTES, 'UTF-8') ?></div>
+            <div class="page-card-file"><?= htmlspecialchars($page, ENT_QUOTES, 'UTF-8') ?>.php</div>
+            <div class="page-card-actions">
+                <a href="sections.php?page=<?= urlencode($page) ?>" class="btn-page sections">
+                    <i class="bi bi-layout-text-sidebar"></i> Secções
+                </a>
+                <a href="content.php?page=<?= urlencode($page) ?>" class="btn-page content">
+                    <i class="bi bi-pencil-square"></i> Conteúdos
+                </a>
             </div>
         </div>
     </div>

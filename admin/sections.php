@@ -14,60 +14,55 @@ if ($selectedPage) {
 include __DIR__ . '/includes/header.php';
 ?>
 
-<div class="d-flex justify-content-between align-items-center mb-4">
-    <h2>Visibilidade das Secções</h2>
-</div>
-
 <!-- Page selector -->
-<div class="row mb-4">
-    <div class="col-md-6">
-        <label class="form-label fw-bold">Selecionar Página</label>
-        <select id="pageSelector" class="form-select" onchange="window.location='sections.php?page='+this.value">
-            <option value="">— Escolha uma página —</option>
-            <?php foreach ($pages as $p): ?>
-            <option value="<?= htmlspecialchars($p, ENT_QUOTES, 'UTF-8') ?>" <?= $selectedPage === $p ? 'selected' : '' ?>>
-                <?= htmlspecialchars(page_label($p), ENT_QUOTES, 'UTF-8') ?> (<?= htmlspecialchars($p, ENT_QUOTES, 'UTF-8') ?>)
-            </option>
-            <?php endforeach; ?>
-        </select>
-    </div>
+<div class="page-selector">
+    <label class="form-label">Página</label>
+    <select id="pageSelector" class="form-select" onchange="window.location='sections.php?page='+this.value">
+        <option value="">— Escolha uma página —</option>
+        <?php foreach ($pages as $p): ?>
+        <option value="<?= htmlspecialchars($p, ENT_QUOTES, 'UTF-8') ?>" <?= $selectedPage === $p ? 'selected' : '' ?>>
+            <?= htmlspecialchars(page_label($p), ENT_QUOTES, 'UTF-8') ?>
+        </option>
+        <?php endforeach; ?>
+    </select>
 </div>
 
 <?php if ($selectedPage && !empty($sections)): ?>
-<div class="card">
-    <div class="card-header">
-        <strong><?= htmlspecialchars(page_label($selectedPage), ENT_QUOTES, 'UTF-8') ?></strong> — Secções
+<div class="panel">
+    <div class="panel-header">
+        <span><?= htmlspecialchars(page_label($selectedPage), ENT_QUOTES, 'UTF-8') ?></span>
     </div>
-    <div class="card-body p-0">
-        <table class="table table-hover mb-0">
-            <thead class="table-light">
-                <tr>
-                    <th>Secção</th>
-                    <th>Chave</th>
-                    <th class="text-center" style="width:120px">Visível</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($sections as $sec): ?>
-                <tr>
-                    <td><?= htmlspecialchars($sec['section_label'], ENT_QUOTES, 'UTF-8') ?></td>
-                    <td><code><?= htmlspecialchars($sec['section_key'], ENT_QUOTES, 'UTF-8') ?></code></td>
-                    <td class="text-center section-toggle">
-                        <div class="form-check form-switch d-inline-block">
-                            <input class="form-check-input" type="checkbox" role="switch"
-                                   data-section-id="<?= (int)$sec['id'] ?>"
-                                   <?= $sec['visible'] ? 'checked' : '' ?>
-                                   onchange="toggleSection(this, <?= (int)$sec['id'] ?>)">
-                        </div>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-    </div>
+    <table class="table-clean">
+        <thead>
+            <tr>
+                <th>Secção</th>
+                <th>Chave</th>
+                <th style="width:100px;text-align:center">Visível</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($sections as $sec): ?>
+            <tr>
+                <td><?= htmlspecialchars($sec['section_label'], ENT_QUOTES, 'UTF-8') ?></td>
+                <td><code><?= htmlspecialchars($sec['section_key'], ENT_QUOTES, 'UTF-8') ?></code></td>
+                <td class="text-center section-toggle">
+                    <div class="form-check form-switch d-inline-block mb-0">
+                        <input class="form-check-input" type="checkbox" role="switch"
+                               data-section-id="<?= (int)$sec['id'] ?>"
+                               <?= $sec['visible'] ? 'checked' : '' ?>
+                               onchange="toggleSection(this, <?= (int)$sec['id'] ?>)">
+                    </div>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
 </div>
 <?php elseif ($selectedPage): ?>
-<div class="alert alert-info">Nenhuma secção encontrada para esta página.</div>
+<div class="empty-state">
+    <i class="bi bi-layout-text-sidebar"></i>
+    <p>Nenhuma secção encontrada para esta página.</p>
+</div>
 <?php endif; ?>
 
 <!-- Toast notification -->

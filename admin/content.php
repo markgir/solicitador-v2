@@ -27,11 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $selectedPage) {
     foreach ($_POST as $key => $value) {
         if (strpos($key, 'content_') === 0) {
             $id = (int) substr($key, 8);
-            $stmt->bindValue(':val', trim($value), SQLITE3_TEXT);
-            $stmt->bindValue(':id', $id, SQLITE3_INTEGER);
-            $stmt->bindValue(':page', $selectedPage, SQLITE3_TEXT);
+            $stmt->bindValue(':val', trim($value), PDO::PARAM_STR);
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+            $stmt->bindValue(':page', $selectedPage, PDO::PARAM_STR);
             $stmt->execute();
-            $stmt->reset();
         }
     }
     // Refresh content after save

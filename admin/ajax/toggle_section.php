@@ -27,8 +27,8 @@ if ($id <= 0) {
 $visible = $visible ? 1 : 0;
 $db = getDB();
 $stmt = $db->prepare('UPDATE sections SET visible = :v WHERE id = :id');
-$stmt->bindValue(':v', $visible, SQLITE3_INTEGER);
-$stmt->bindValue(':id', $id, SQLITE3_INTEGER);
+$stmt->bindValue(':v', $visible, PDO::PARAM_INT);
+$stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $stmt->execute();
 
 echo json_encode(['success' => true, 'visible' => $visible]);

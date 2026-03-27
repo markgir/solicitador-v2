@@ -1,0 +1,7 @@
+database/*.db
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.env

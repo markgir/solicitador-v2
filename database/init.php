@@ -351,7 +351,7 @@ foreach ($contentKeys as $ck) {
     $stmtContent->bindValue(':key', $ck[1], PDO::PARAM_STR);
     $stmtContent->bindValue(':value', null, PDO::PARAM_NULL);
     $stmtContent->bindValue(':type', $ck[4], PDO::PARAM_STR);
-    $stmtContent->bindValue(':label', $ck[3], PDO::PARAM_STR);
+    $stmtContent->bindValue(':label', $ck[2], PDO::PARAM_STR);
     $stmtContent->execute();
 }
 echo "Content keys seeded (" . count($contentKeys) . " entries)\n";

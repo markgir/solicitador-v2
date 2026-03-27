@@ -362,14 +362,12 @@
                 <div class="pxn-h3_hero_wrap">
                   <div class="hero_content" data-bg-image="./assets/images/hero/h3-hero-content-bg.png">
                     <div class="hero_sub pxn-fade">Business Consulting</div>
-                    <h1 class="hero_title pxn-split-text">Built for Business Growth</h1>
-                    <div class="hero_desc pxn-fade" data-delay=".3">We deliver innovative corporate solutions that help
-                      businesses thrive
-                      in today’s competitive market. Our team</div>
+                    <h1 class="hero_title pxn-split-text"><?= c('hero_title', 'Built for Business Growth') ?></h1>
+                    <div class="hero_desc pxn-fade" data-delay=".3"><?= c('hero_description', 'We deliver innovative corporate solutions that help businesses thrive in today\'s competitive market. Our team') ?></div>
 
                     <div class="hero_action pxn-fade" data-delay=".5">
                       <a href="about.php" class="hero_btn pxn-btn-primary">
-                        <span class="btn_text"><span>Get Started</span></span>
+                        <span class="btn_text"><span><?= c('hero_btn_text', 'Get Started') ?></span></span>
                         <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
                       </a>
 
@@ -516,8 +514,8 @@
 
                   <div class="pxn-h3_about_content">
                     <div class="section_heading">
-                      <span class="sec_sub pxn-fade">About Our Consulting</span>
-                      <h2 class="sec_title pxn-chars-reveal">Driving Business Success Through Strategy</h2>
+                      <span class="sec_sub pxn-fade"><?= c('about_subtitle', 'About Our Consulting') ?></span>
+                      <h2 class="sec_title pxn-chars-reveal"><?= c('about_title', 'Driving Business Success Through Strategy') ?></h2>
                       <div class="sec_desc pxn-fade" data-delay=".3">We are a results-driven business consulting firm
                         dedicated to helping
                         organizations improve performance, optimize operations, and achieve sustainable growth.</div>
@@ -572,8 +570,8 @@
                         <div class="pxn-h3_services_wrap">
                           <div class="section_heading">
                             <div class="heading_text">
-                              <span class="sec_sub pxn-fade">What We Offer</span>
-                              <h2 class="sec_title pxn-chars-reveal">Innovates Services That Elevate Your Business</h2>
+                              <span class="sec_sub pxn-fade"><?= c('services_subtitle', 'What We Offer') ?></span>
+                              <h2 class="sec_title pxn-chars-reveal"><?= c('services_title', 'Innovates Services That Elevate Your Business') ?></h2>
                             </div>
 
                             <div class="pxn_review pxn-fade" data-delay=".3">
@@ -738,8 +736,8 @@
               <div class="col">
                 <div class="pxn-h3_team_wrap">
                   <div class="section_heading text-center">
-                    <span class="sec_sub pxn-fade">Meet the Team</span>
-                    <h2 class="sec_title pxn-chars-reveal">Meet Our Leadership and Consulting Team</h2>
+                    <span class="sec_sub pxn-fade"><?= c('team_subtitle', 'Meet the Team') ?></span>
+                    <h2 class="sec_title pxn-chars-reveal"><?= c('team_title', 'Meet Our Leadership and Consulting Team') ?></h2>
                   </div>
 
                   <div class="team_wrapper">
@@ -1310,8 +1308,8 @@
               <div class="col">
                 <div class="pxn-h3_projects_wrap">
                   <div class="section_heading text-center">
-                    <span class="sec_sub pxn-fade">Latest Project</span>
-                    <h2 class="sec_title pxn-chars-reveal">Business Transformation That Delivers Results</h2>
+                    <span class="sec_sub pxn-fade"><?= c('projects_subtitle', 'Latest Project') ?></span>
+                    <h2 class="sec_title pxn-chars-reveal"><?= c('projects_title', 'Business Transformation That Delivers Results') ?></h2>
                   </div>
 
                   <div class="pxn-h3_projects">
@@ -1486,7 +1484,7 @@
                   <div class="cta_content" data-bg-image="./assets/images/hero/h3-hero-content-bg.png">
                     <div class="section_heading">
                       <span class="sec_sub pxn-fade">Powering the Future</span>
-                      <h2 class="sec_title pxn-chars-reveal">Building a Team of Insight-Driven Consultants</h2>
+                      <h2 class="sec_title pxn-chars-reveal"><?= c('cta_title', 'Building a Team of Insight-Driven Consultants') ?></h2>
                       <div class="sec_desc pxn-fade" data-delay=".3">We are building a team of insight-driven
                         consultants who combine
                         deep industry knowledge with strategic thinking.</div>
@@ -1528,8 +1526,8 @@
               <div class="col">
                 <div class="pxn-h3_blog_wrap">
                   <div class="section_heading text-center">
-                    <span class="sec_sub pxn-fade">Latest Blog Post</span>
-                    <h2 class="sec_title pxn-chars-reveal">Latest Insights from Our Consultants</h2>
+                    <span class="sec_sub pxn-fade"><?= c('blog_subtitle', 'Latest Blog Post') ?></span>
+                    <h2 class="sec_title pxn-chars-reveal"><?= c('blog_title', 'Latest Insights from Our Consultants') ?></h2>
                   </div>
 
                   <div class="pxn-h3_blog_posts">

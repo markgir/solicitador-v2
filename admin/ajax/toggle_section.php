@@ -7,6 +7,13 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
     exit;
 }
 
+// CSRF validation
+$csrfHeader = isset($_SERVER['HTTP_X_CSRF_TOKEN']) ? $_SERVER['HTTP_X_CSRF_TOKEN'] : '';
+if (empty($_SESSION['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $csrfHeader)) {
+    echo json_encode(['success' => false, 'error' => 'Invalid CSRF token']);
+    exit;
+}
+
 require_once __DIR__ . '/../../includes/functions.php';
 
 $id = isset($_POST['id']) ? (int) $_POST['id'] : 0;

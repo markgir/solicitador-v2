@@ -6,6 +6,11 @@ $selectedPage = isset($_GET['page']) ? $_GET['page'] : null;
 $pages = get_all_pages();
 $pageTitle = 'Editar Conteúdos';
 
+// Validate selectedPage against allowed pages
+if ($selectedPage !== null && !in_array($selectedPage, $pages, true)) {
+    $selectedPage = null;
+}
+
 $contentItems = [];
 if ($selectedPage) {
     $contentItems = get_page_content($selectedPage);
@@ -13,6 +18,10 @@ if ($selectedPage) {
 
 // Handle POST save
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $selectedPage) {
+    if (!isset($_POST['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+        http_response_code(403);
+        die('Invalid CSRF token.');
+    }
     $db = getDB();
     $stmt = $db->prepare('UPDATE content SET content_value = :val WHERE id = :id AND page = :page');
     foreach ($_POST as $key => $value) {
@@ -61,6 +70,7 @@ include __DIR__ . '/includes/header.php';
 
 <?php if ($selectedPage && !empty($contentItems)): ?>
 <form method="post" action="content.php?page=<?= urlencode($selectedPage) ?>">
+    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token'], ENT_QUOTES, 'UTF-8') ?>">
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <strong><?= htmlspecialchars(page_label($selectedPage), ENT_QUOTES, 'UTF-8') ?></strong> — Conteúdos

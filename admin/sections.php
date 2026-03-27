@@ -81,19 +81,23 @@ include __DIR__ . '/includes/header.php';
 </div>
 
 <?php
-$extraScripts = <<<'JS'
+$csrfToken = htmlspecialchars($_SESSION['csrf_token'], ENT_QUOTES, 'UTF-8');
+$extraScripts = <<<SCRIPT
 <script>
 function toggleSection(el, id) {
-    const visible = el.checked ? 1 : 0;
+    var visible = el.checked ? 1 : 0;
     fetch('ajax/toggle_section.php', {
         method: 'POST',
-        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'X-CSRF-Token': '$csrfToken'
+        },
         body: 'id=' + id + '&visible=' + visible
     })
-    .then(r => r.json())
-    .then(data => {
-        const t = document.getElementById('toast');
-        const tb = document.getElementById('toastBody');
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+        var t = document.getElementById('toast');
+        var tb = document.getElementById('toastBody');
         if (data.success) {
             t.className = 'toast align-items-center text-bg-success';
             tb.textContent = 'Secção atualizada!';
@@ -104,12 +108,12 @@ function toggleSection(el, id) {
         }
         new bootstrap.Toast(t).show();
     })
-    .catch(() => {
+    .catch(function() {
         el.checked = !el.checked;
         alert('Erro de ligação.');
     });
 }
 </script>
-JS;
+SCRIPT;
 include __DIR__ . '/includes/footer.php';
 ?>

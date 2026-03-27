@@ -35,24 +35,6 @@ function c($key, $default = '', $page = null) {
     return htmlspecialchars($result['content_value'], ENT_QUOTES, 'UTF-8');
 }
 
-/**
- * Get raw HTML content (for rich text fields).
- */
-function cHtml($key, $default = '', $page = null) {
-    if ($page === null) {
-        global $current_page;
-        $page = isset($current_page) ? $current_page : 'global';
-    }
-    $db = getDB();
-    $stmt = $db->prepare('SELECT content_value FROM content WHERE page = :page AND content_key = :key');
-    $stmt->bindValue(':page', $page, SQLITE3_TEXT);
-    $stmt->bindValue(':key', $key, SQLITE3_TEXT);
-    $result = $stmt->execute()->fetchArray(SQLITE3_ASSOC);
-    if ($result === false || $result['content_value'] === null || $result['content_value'] === '') {
-        return $default;
-    }
-    return $result['content_value'];
-}
 
 /**
  * Get all sections for a given page.

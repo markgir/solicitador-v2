@@ -400,10 +400,10 @@
                   <div class="row">
                     <div class="col">
                       <div class="pxn_hero_content">
-                        <span class="hero_sub">Business Consulting</span>
-                        <h1 class="hero_title">Consulting <br> for Sustainable <br> Growth</h1>
-                        <a href="about.php" class="hero_btn pxn-btn-primary">
-                          <span class="btn_text"><span>Get Started</span></span>
+                        <span class="hero_sub"><?= c('hero_subtitle', 'Business Consulting') ?></span>
+                        <h1 class="hero_title"><?= c('hero_title', 'Consulting for Sustainable Growth') ?></h1>
+                        <a href="<?= c('hero_btn_url', 'about.php') ?>" class="hero_btn pxn-btn-primary">
+                          <span class="btn_text"><span><?= c('hero_btn_text', 'Get Started') ?></span></span>
                           <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
                         </a>
                       </div>
@@ -415,9 +415,7 @@
                     <div class="icon">
                       <i class="pxni-award"></i>
                     </div>
-                    <div class="desc">Unlock sustainable business growth with expert consultancy services backed by
-                      seasoned
-                      industry experts.</div>
+                    <div class="desc"><?= c('hero_description', 'Unlock sustainable business growth with expert consultancy services backed by seasoned industry experts.') ?></div>
                   </div>
                 </div>
               </div>
@@ -437,10 +435,10 @@
                   <div class="row">
                     <div class="col">
                       <div class="pxn_hero_content">
-                        <span class="hero_sub">Business Consulting</span>
-                        <h1 class="hero_title">Consulting <br> for Sustainable <br> Growth</h1>
-                        <a href="about.php" class="hero_btn pxn-btn-primary">
-                          <span class="btn_text"><span>Get Started</span></span>
+                        <span class="hero_sub"><?= c('hero_subtitle', 'Business Consulting') ?></span>
+                        <h1 class="hero_title"><?= c('hero_title', 'Consulting for Sustainable Growth') ?></h1>
+                        <a href="<?= c('hero_btn_url', 'about.php') ?>" class="hero_btn pxn-btn-primary">
+                          <span class="btn_text"><span><?= c('hero_btn_text', 'Get Started') ?></span></span>
                           <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
                         </a>
                       </div>
@@ -452,9 +450,7 @@
                     <div class="icon">
                       <i class="pxni-award"></i>
                     </div>
-                    <div class="desc">Unlock sustainable business growth with expert consultancy services backed by
-                      seasoned
-                      industry experts.</div>
+                    <div class="desc"><?= c('hero_description', 'Unlock sustainable business growth with expert consultancy services backed by seasoned industry experts.') ?></div>
                   </div>
                 </div>
               </div>
@@ -494,8 +490,8 @@
                 <div class="pxn-h1_we_offer_wrapper">
                   <div class="section_heading">
                     <div class="heading_text">
-                      <span class="sec_sub pxn-fade">What We Offer</span>
-                      <h2 class="sec_title pxn-split-text">Innovative Services That Elevate Your Business</h2>
+                      <span class="sec_sub pxn-fade"><?= c('offer_subtitle', 'What We Offer') ?></span>
+                      <h2 class="sec_title pxn-split-text"><?= c('offer_title', 'Innovative Services That Elevate Your Business') ?></h2>
                     </div>
 
                     <div class="sec_desc pxn-fade" data-delay=".5">Our digital marketing services are designe to help
@@ -591,8 +587,8 @@
 
                   <div class="pxn-h1_about_content">
                     <div class="section_heading">
-                      <span class="sec_sub pxn-fade">About Our Consulting</span>
-                      <h2 class="sec_title pxn-split-text">Smart Consulting for Ambitious Companies</h2>
+                      <span class="sec_sub pxn-fade"><?= c('about_subtitle', 'About Our Consulting') ?></span>
+                      <h2 class="sec_title pxn-split-text"><?= c('about_title', 'Smart Consulting for Ambitious Companies') ?></h2>
                       <div class="sec_desc pxn-fade">We are a results-driven business consulting firm dedicated to
                         helping
                         organizations improve performance, optimize operations, and achieve sustainable growth.</div>
@@ -685,8 +681,8 @@
                 <div class="pxn-h1_why_choose_wrapper">
                   <div class="section_heading">
                     <div class="heading_text">
-                      <span class="sec_sub pxn-fade">Why Choose Us</span>
-                      <h2 class="sec_title pxn-split-text">Why Businesses Trust Our Consultants</h2>
+                      <span class="sec_sub pxn-fade"><?= c('why_choose_subtitle', 'Why Choose Us') ?></span>
+                      <h2 class="sec_title pxn-split-text"><?= c('why_choose_title', 'Why Businesses Trust Our Consultants') ?></h2>
                     </div>
 
                     <div class="sec_desc pxn-fade" data-delay=".5">Clients choose us for our strategic clarity,
@@ -758,8 +754,8 @@
               <div class="col">
                 <div class="pxn-h1_team_wrapper">
                   <div class="section_heading text-center">
-                    <span class="sec_sub pxn-fade">Meet the Team</span>
-                    <h2 class="sec_title pxn-split-text">Meet Our Leadership and Consulting Team</h2>
+                    <span class="sec_sub pxn-fade"><?= c('team_subtitle', 'Meet the Team') ?></span>
+                    <h2 class="sec_title pxn-split-text"><?= c('team_title', 'Meet Our Leadership and Consulting Team') ?></h2>
                   </div>
 
                   <div class="team_wrapper">
@@ -861,8 +857,8 @@
               <div class="col">
                 <div class="pxn-h1_projects_wrapper">
                   <div class="section_heading text-center">
-                    <span class="sec_sub pxn-fade">Latest Project</span>
-                    <h2 class="sec_title pxn-split-text">Business Transformation That Delivers Results</h2>
+                    <span class="sec_sub pxn-fade"><?= c('projects_subtitle', 'Latest Project') ?></span>
+                    <h2 class="sec_title pxn-split-text"><?= c('projects_title', 'Business Transformation That Delivers Results') ?></h2>
                   </div>
 
                   <div class="pxn-h1_projects_wrap grid">
@@ -973,8 +969,8 @@
                 <div class="pxn-h1_pricing_wrapper">
                   <div class="section_heading">
                     <div class="heading_text">
-                      <span class="sec_sub pxn-fade">Pricing Plans</span>
-                      <h2 class="sec_title pxn-split-text">Choose the Right Plan for Your Business</h2>
+                      <span class="sec_sub pxn-fade"><?= c('pricing_subtitle', 'Pricing Plans') ?></span>
+                      <h2 class="sec_title pxn-split-text"><?= c('pricing_title', 'Choose the Right Plan for Your Business') ?></h2>
                     </div>
 
                     <label class="pxn_toggle_switcher pxn-fade" data-delay=".5">
@@ -1092,8 +1088,8 @@
               <div class="col">
                 <div class="pxn-h1_testimonial_wrap">
                   <div class="section_heading text-center">
-                    <span class="sec_sub pxn-fade">Clients Feedback</span>
-                    <h2 class="sec_title pxn-split-text">Client Experiences That Speak for Themselves</h2>
+                    <span class="sec_sub pxn-fade"><?= c('testimonial_subtitle', 'Clients Feedback') ?></span>
+                    <h2 class="sec_title pxn-split-text"><?= c('testimonial_title', 'Client Experiences That Speak for Themselves') ?></h2>
                   </div>
                 </div>
               </div>
@@ -1281,8 +1277,8 @@
                 <div class="pxn-h1_blog_wrap">
                   <div class="section_heading">
                     <div class="heading_text">
-                      <span class="sec_sub pxn-fade">Latest Blog Post</span>
-                      <h2 class="sec_title pxn-split-text">Latest Insights from Our Consultants</h2>
+                      <span class="sec_sub pxn-fade"><?= c('blog_subtitle', 'Latest Blog Post') ?></span>
+                      <h2 class="sec_title pxn-split-text"><?= c('blog_title', 'Latest Insights from Our Consultants') ?></h2>
                     </div>
 
                     <div class="d-inline-flex d-none d-lg-inline-flex pxn-fade" data-delay=".5">
@@ -1486,7 +1482,7 @@
                   <div class="pxn_contact_form">
                     <div class="section_heading">
                       <span class="sec_sub pxn-fade">Contact Us</span>
-                      <h2 class="sec_title pxn-split-text">Let’s Build Your Success Together</h2>
+                      <h2 class="sec_title pxn-split-text"><?= c('contact_title', 'Let’s Build Your Success Together') ?></h2>
                     </div>
 
                     <form action="index.php" class="pxn-fade">

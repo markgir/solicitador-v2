@@ -334,15 +334,11 @@
               <div class="col">
                 <div class="pxn-h2_hero_wrapper">
                   <div class="hero_content">
-                    <h1 class="hero_title pxn-chars-up">Turning Strategy into Success</h1>
-                    <div class="hero_desc pxn-fade" data-delay=".5">We deliver innovative corporate solutions that help
-                      businesses
-                      thrive in
-                      today’s
-                      competitive market. Our team</div>
+                    <h1 class="hero_title pxn-chars-up"><?= c('hero_title', 'Turning Strategy into Success') ?></h1>
+                    <div class="hero_desc pxn-fade" data-delay=".5"><?= c('hero_description', 'We deliver innovative corporate solutions that help businesses thrive in today’s competitive market. Our team') ?></div>
                     <div class="pxn-fade" data-delay=".7">
-                      <a href="about.php" class="hero_btn pxn-btn-primary">
-                        <span class="btn_text"><span>Get Started</span></span>
+                      <a href="<?= c('hero_btn_url', 'about.php') ?>" class="hero_btn pxn-btn-primary">
+                        <span class="btn_text"><span><?= c('hero_btn_text', 'Get Started') ?></span></span>
                         <span class="btn_icon"><i class="pxni-arrow-right"></i></span>
                       </a>
                     </div>
@@ -392,8 +388,8 @@
 
                   <div class="pxn-h2_about_content">
                     <div class="section_heading">
-                      <span class="sec_sub pxn-fade">About Our Consulting</span>
-                      <h2 class="sec_title pxn-chars-up">Driving Business Success Through Strategy</h2>
+                      <span class="sec_sub pxn-fade"><?= c('about_subtitle', 'About Our Consulting') ?></span>
+                      <h2 class="sec_title pxn-chars-up"><?= c('about_title', 'Driving Business Success Through Strategy') ?></h2>
                       <div class="sec_desc pxn-fade" data-delay=".3">We are a results-driven business consulting firm
                         dedicated to helping
                         organizations improve performance, optimize operations, and achieve sustainable growth.</div>
@@ -455,8 +451,8 @@
               <div class="col">
                 <div class="pxn-h2_services_wrap">
                   <div class="section_heading text-center">
-                    <span class="sec_sub pxn-fade">What We Offer</span>
-                    <h2 class="sec_title pxn-chars-up">Innovates Services That Elevate Your Business</h2>
+                    <span class="sec_sub pxn-fade"><?= c('services_subtitle', 'What We Offer') ?></span>
+                    <h2 class="sec_title pxn-chars-up"><?= c('services_title', 'Innovates Services That Elevate Your Business') ?></h2>
                   </div>
 
                   <div class="pxn-h2_services">
@@ -634,8 +630,8 @@
               <div class="col">
                 <div class="pxn-h2_projects_wrapper">
                   <div class="section_heading text-center">
-                    <span class="sec_sub pxn-fade">Latest Project</span>
-                    <h2 class="sec_title pxn-chars-up">Business Transformation That Delivers Results</h2>
+                    <span class="sec_sub pxn-fade"><?= c('projects_subtitle', 'Latest Project') ?></span>
+                    <h2 class="sec_title pxn-chars-up"><?= c('projects_title', 'Business Transformation That Delivers Results') ?></h2>
                   </div>
 
                   <div class="pxn-h2_projects_wrap">
@@ -733,8 +729,8 @@
               <div class="col">
                 <div class="pxn-h2_process_wrap">
                   <div class="section_heading text-center">
-                    <span class="sec_sub pxn-fade">Our Work Process</span>
-                    <h2 class="sec_title pxn-chars-up">How We Deliver Business Consulting Solutions</h2>
+                    <span class="sec_sub pxn-fade"><?= c('process_subtitle', 'Our Work Process') ?></span>
+                    <h2 class="sec_title pxn-chars-up"><?= c('process_title', 'How We Deliver Business Consulting Solutions') ?></h2>
                   </div>
 
                   <div class="pxn-h2_process_items">
@@ -834,8 +830,8 @@
               <div class="col">
                 <div class="pxn-h2_team_wrap">
                   <div class="section_heading text-center">
-                    <span class="sec_sub pxn-fade">Meet the Team</span>
-                    <h2 class="sec_title pxn-chars-up">Meet Our Leadership and Consulting Team</h2>
+                    <span class="sec_sub pxn-fade"><?= c('team_subtitle', 'Meet the Team') ?></span>
+                    <h2 class="sec_title pxn-chars-up"><?= c('team_title', 'Meet Our Leadership and Consulting Team') ?></h2>
                   </div>
 
                   <div class="team_wrapper">
@@ -945,8 +941,8 @@
                 <div class="pxn-h2_faq_wrap">
                   <div class="faq_content">
                     <div class="section_heading">
-                      <span class="sec_sub pxn-fade">Frequently question</span>
-                      <h2 class="sec_title pxn-chars-up">Common Questions About Our Services</h2>
+                      <span class="sec_sub pxn-fade"><?= c('faq_subtitle', 'Frequently question') ?></span>
+                      <h2 class="sec_title pxn-chars-up"><?= c('faq_title', 'Common Questions About Our Services') ?></h2>
                     </div>
 
                     <div class="pxn_accordion pxn-fade" data-delay=".3" id="pxnAccordion">
@@ -1090,8 +1086,8 @@
               <div class="col">
                 <div class="pxn-h2_testimonial_wrap">
                   <div class="section_heading text-center">
-                    <span class="sec_sub pxn-fade">Clients Feedback</span>
-                    <h2 class="sec_title pxn-chars-up">Client Experiences That Speak for Themselves</h2>
+                    <span class="sec_sub pxn-fade"><?= c('testimonial_subtitle', 'Clients Feedback') ?></span>
+                    <h2 class="sec_title pxn-chars-up"><?= c('testimonial_title', 'Client Experiences That Speak for Themselves') ?></h2>
                   </div>
                 </div>
               </div>
@@ -1420,8 +1416,8 @@
                 <div class="pxn-h2_blog_wrap">
                   <div class="section_heading">
                     <div class="heading_text">
-                      <span class="sec_sub pxn-fade">Latest Blog Post</span>
-                      <h2 class="sec_title pxn-chars-up">Latest Insights from Our Consultants</h2>
+                      <span class="sec_sub pxn-fade"><?= c('blog_subtitle', 'Latest Blog Post') ?></span>
+                      <h2 class="sec_title pxn-chars-up"><?= c('blog_title', 'Latest Insights from Our Consultants') ?></h2>
                     </div>
 
                     <div class="pxn-fade d-none d-lg-inline-flex" data-delay=".3">

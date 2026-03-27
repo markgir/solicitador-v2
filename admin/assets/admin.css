@@ -501,7 +501,9 @@ textarea.form-control { resize: vertical; }
 .empty-state i { font-size: 2rem; margin-bottom: .75rem; display: block; opacity: .5; }
 .empty-state p { font-size: .85rem; margin: 0; }
 
-/* ── Scrollbar ──────────────────────────────────────────────── */
+/* ── Utility ─────────────────────────────────────────────────── */
+.d-flex-center { display: flex; align-items: center; gap: .75rem; }
+.stat-fraction { font-size: .85rem; font-weight: 400; color: var(--text-muted); }
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }

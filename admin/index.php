@@ -48,7 +48,7 @@ include __DIR__ . '/includes/header.php';
         <div class="stat-card">
             <div class="stat-icon content"><i class="bi bi-check2-circle"></i></div>
             <div>
-                <div class="stat-value"><?= $editedContent ?><span style="font-size:.85rem;font-weight:400;color:var(--text-muted)"> / <?= $totalContent ?></span></div>
+                <div class="stat-value"><?= $editedContent ?><span class="stat-fraction"> / <?= $totalContent ?></span></div>
                 <div class="stat-label">Conteúdos Editados</div>
             </div>
         </div>

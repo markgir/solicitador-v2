@@ -51,7 +51,7 @@ $currentFile = basename($_SERVER['SCRIPT_NAME'], '.php');
     <!-- Main wrapper -->
     <div class="admin-main">
         <header class="admin-topbar">
-            <div style="display:flex;align-items:center;gap:.75rem">
+            <div class="d-flex-center">
                 <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Menu">
                     <i class="bi bi-list"></i>
                 </button>

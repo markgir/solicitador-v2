@@ -1,8 +1,19 @@
-    </div><!-- /.container-fluid -->
-    <footer class="bg-light text-center py-3 mt-4 border-top">
-        <small class="text-muted">Backoffice &copy; <?= date('Y') ?></small>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        </main><!-- /.admin-content -->
+        <footer class="admin-footer">
+            Backoffice &copy; <?= date('Y') ?>
+        </footer>
+    </div><!-- /.admin-main -->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+    function toggleSidebar() {
+        document.getElementById('adminSidebar').classList.toggle('open');
+        document.getElementById('sidebarOverlay').classList.toggle('open');
+    }
+    function closeSidebar() {
+        document.getElementById('adminSidebar').classList.remove('open');
+        document.getElementById('sidebarOverlay').classList.remove('open');
+    }
+    </script>
     <?php if (isset($extraScripts)) echo $extraScripts; ?>
 </body>
 </html>

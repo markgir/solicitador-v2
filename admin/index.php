@@ -7,10 +7,10 @@ $pages = get_all_pages();
 $db = getDB();
 
 // Count stats
-$totalSections = $db->querySingle('SELECT COUNT(*) FROM sections');
-$hiddenSections = $db->querySingle('SELECT COUNT(*) FROM sections WHERE visible = 0');
-$totalContent = $db->querySingle('SELECT COUNT(*) FROM content');
-$editedContent = $db->querySingle("SELECT COUNT(*) FROM content WHERE content_value IS NOT NULL AND content_value != ''");
+$totalSections = $db->query('SELECT COUNT(*) FROM sections')->fetchColumn();
+$hiddenSections = $db->query('SELECT COUNT(*) FROM sections WHERE visible = 0')->fetchColumn();
+$totalContent = $db->query('SELECT COUNT(*) FROM content')->fetchColumn();
+$editedContent = $db->query("SELECT COUNT(*) FROM content WHERE content_value IS NOT NULL AND content_value != ''")->fetchColumn();
 
 include __DIR__ . '/includes/header.php';
 ?>

@@ -11,7 +11,7 @@ Website profissional para escritório de solicitadoria, com painel de administra
   - Edição de conteúdos de texto de todas as páginas
   - Ativar/desativar secções individualmente por página (via toggle AJAX)
   - Dashboard com estatísticas do site
-- **Base de dados SQLite** — sem necessidade de MySQL ou outro servidor de base de dados
+- **Base de dados MySQL** — compatível com qualquer alojamento partilhado
 - **Design responsivo** com Bootstrap 5, animações GSAP, carrosséis Swiper e mapas Leaflet
 - **Segurança**: passwords com hash bcrypt, proteção CSRF, prepared statements SQL, escape XSS
 
@@ -20,14 +20,15 @@ Website profissional para escritório de solicitadoria, com painel de administra
 ## Requisitos
 
 - **PHP** >= 7.4
+- **MySQL** >= 5.7 (ou MariaDB >= 10.2)
 - **Servidor web** Apache (com `mod_rewrite`) ou Nginx
 - **Extensões PHP necessárias:**
-  - `sqlite3` — acesso à base de dados SQLite
+  - `pdo` e `pdo_mysql` — acesso à base de dados MySQL
   - `mbstring` — manipulação de strings multibyte
   - `session` — gestão de sessões (autenticação admin)
   - `json` — tratamento de dados JSON (AJAX)
 
-> A maioria destas extensões vem ativada por defeito no PHP.
+> A maioria destas extensões vem ativada por defeito no PHP. Todos os alojamentos partilhados incluem MySQL e PDO.
 
 ---
 
@@ -40,15 +41,26 @@ git clone https://github.com/markgir/solicitador-v2.git
 cd solicitador-v2
 ```
 
-### 2. Inicializar a base de dados
+### 2. Criar a base de dados MySQL
+
+Crie uma base de dados MySQL e importe o ficheiro `database/backoffice.sql`:
 
 ```bash
-php database/init.php
+mysql -u root -p nome_da_base_de_dados < database/backoffice.sql
 ```
 
-Este comando cria o ficheiro `database/backoffice.db` com as tabelas e dados iniciais.
+### 3. Configurar a ligação à base de dados
 
-### 3. Configurar o servidor web
+Edite o ficheiro `includes/config.php` com os dados da sua base de dados:
+
+```php
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'nome_da_base_de_dados');
+define('DB_USER', 'utilizador_mysql');
+define('DB_PASS', 'password_mysql');
+```
+
+### 4. Configurar o servidor web
 
 Apontar o document root do servidor para a pasta raiz do projeto.
 
@@ -96,8 +108,8 @@ solicitador-v2/
 ├── error.php                              # Página 404
 ├── coming-soon.php                        # Em Breve
 ├── includes/
-│   ├── config.php        # Constantes de configuração
-│   ├── db.php            # Ligação à base de dados SQLite
+│   ├── config.php        # Configuração da base de dados MySQL
+│   ├── db.php            # Ligação à base de dados MySQL (PDO)
 │   └── functions.php     # Funções auxiliares (conteúdos e secções)
 ├── database/
 │   ├── init.php          # Script de inicialização da base de dados
@@ -142,64 +154,38 @@ Se utiliza um serviço de alojamento partilhado (ex.: cPanel, DirectAdmin, Plesk
    └── ...
    ```
 
-### 2. Criar a base de dados
+### 2. Criar a base de dados MySQL
 
-A base de dados é **SQLite** (ficheiro local) — **não precisa de criar uma base de dados MySQL**.
+1. No painel de controlo, aceda a **Bases de Dados MySQL** (MySQL Databases).
+2. Crie uma **nova base de dados** (ex.: `solicitador`).
+3. Crie um **novo utilizador** com uma password segura.
+4. **Associe o utilizador à base de dados** com **todos os privilégios**.
 
-**Opção A — Via Terminal / SSH** (recomendado):
+> 💡 **Nota:** No cPanel, o nome da base de dados e do utilizador ficam com um prefixo (ex.: `cpuser_solicitador`). Use o nome completo na configuração.
 
-1. Aceda ao **Terminal** no painel de controlo (cPanel → Terminal, ou ligue-se por SSH).
-2. Navegue até à pasta do projeto e execute:
-   ```bash
-   cd ~/public_html
-   php database/init.php
-   ```
-3. Deverá ver a mensagem: `Database initialized successfully`.
+### 3. Importar a base de dados
 
-**Opção B — Importar o ficheiro SQL via terminal**:
+1. No painel de controlo, aceda ao **phpMyAdmin**.
+2. Selecione a base de dados que acabou de criar.
+3. Clique no separador **Importar**.
+4. Clique em **Escolher ficheiro** e selecione o ficheiro `database/backoffice.sql`.
+5. Clique em **Executar** (Go).
+6. Deverá ver a mensagem de sucesso — as tabelas e dados iniciais foram criados.
 
-1. Aceda ao **Terminal** no painel de controlo.
-2. Execute:
-   ```bash
-   cd ~/public_html
-   sqlite3 database/backoffice.db < database/backoffice.sql
-   ```
+### 4. Configurar a ligação à base de dados
 
-**Opção C — Aceder à página do site** (automático):
+1. No **Gestor de Ficheiros**, navegue até `includes/config.php`.
+2. Clique com o botão direito → **Editar** (Edit).
+3. Preencha os dados da base de dados que criou no passo 2:
 
-Se o ficheiro `database/backoffice.db` não existir, basta visitar qualquer página do site no browser. A base de dados será criada automaticamente na primeira visita. Depois execute o init para popular os dados:
-
-1. Visite `https://seudominio.pt` para criar o ficheiro da base de dados.
-2. Execute via Terminal:
-   ```bash
-   cd ~/public_html
-   php database/init.php
-   ```
-
-### 3. Verificar permissões
-
-A pasta `database/` precisa de permissões de escrita para o PHP poder criar e modificar o ficheiro da base de dados:
-
-```bash
-chmod 755 database/
-chmod 644 database/backoffice.db
+```php
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'cpuser_solicitador');   // nome completo da base de dados
+define('DB_USER', 'cpuser_utilizador');    // nome completo do utilizador
+define('DB_PASS', 'a_sua_password_segura');
 ```
 
-> Em alguns alojamentos, as permissões já estão corretas por defeito. Se tiver problemas, tente `chmod 775 database/`.
-
-### 4. Proteger a pasta da base de dados
-
-Para evitar que o ficheiro `.db` seja descarregado diretamente pelo browser, crie um ficheiro `.htaccess` dentro da pasta `database/`:
-
-```bash
-echo "Deny from all" > database/.htaccess
-```
-
-Ou crie o ficheiro manualmente no Gestor de Ficheiros com o conteúdo:
-
-```apache
-Deny from all
-```
+4. Guarde o ficheiro.
 
 ### 5. Aceder ao painel de administração
 
@@ -212,8 +198,8 @@ Deny from all
 ### Requisitos do alojamento
 
 - **PHP** >= 7.4 (a maioria dos alojamentos oferece PHP 8.x)
-- Extensão **SQLite3** ativada (vem ativa por defeito na maioria dos alojamentos)
-- Extensões `mbstring`, `session` e `json` ativas (habitual por defeito)
+- **MySQL** >= 5.7 ou **MariaDB** >= 10.2 (incluído em todos os alojamentos)
+- Extensões `pdo`, `pdo_mysql`, `mbstring`, `session` e `json` ativas (habitual por defeito)
 
 > 💡 **Dica:** Pode verificar as extensões PHP ativas criando um ficheiro `info.php` com `<?php phpinfo(); ?>` e acedendo-o no browser. Apague-o depois de verificar.
 
@@ -221,13 +207,14 @@ Deny from all
 
 ## Ficheiro SQL da Base de Dados
 
-O ficheiro `database/backoffice.sql` contém todo o esquema e dados iniciais da base de dados em formato SQL puro. Pode ser utilizado para:
+O ficheiro `database/backoffice.sql` contém todo o esquema e dados iniciais da base de dados em formato MySQL. Pode ser utilizado para:
 
-- **Importar a base de dados** sem executar PHP: `sqlite3 database/backoffice.db < database/backoffice.sql`
-- **Recriar a base de dados** se o ficheiro `.db` for corrompido
+- **Importar via phpMyAdmin** — basta selecionar a base de dados e usar o separador "Importar"
+- **Importar via terminal** (se tiver acesso SSH): `mysql -u utilizador -p nome_da_bd < database/backoffice.sql`
+- **Recriar a base de dados** se necessário
 - **Inspecionar o esquema** das tabelas e os dados iniciais
 
-> Este ficheiro é equivalente a executar `php database/init.php` — ambos produzem o mesmo resultado.
+> Em alternativa, pode executar `php database/init.php` para criar as tabelas e popular os dados iniciais via PHP (requer que o ficheiro `includes/config.php` esteja configurado).
 
 ---
 

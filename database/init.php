@@ -11,44 +11,47 @@ $db = getDB();
 // Create tables
 $db->exec('
     CREATE TABLE IF NOT EXISTS users (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        username TEXT UNIQUE NOT NULL,
-        password TEXT NOT NULL,
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(255) UNIQUE NOT NULL,
+        password VARCHAR(255) NOT NULL,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-    )
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ');
 
 $db->exec('
     CREATE TABLE IF NOT EXISTS sections (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        page TEXT NOT NULL,
-        section_key TEXT NOT NULL,
-        section_label TEXT NOT NULL,
-        visible INTEGER DEFAULT 1,
-        sort_order INTEGER DEFAULT 0,
-        UNIQUE(page, section_key)
-    )
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        page VARCHAR(255) NOT NULL,
+        section_key VARCHAR(255) NOT NULL,
+        section_label VARCHAR(255) NOT NULL,
+        visible TINYINT DEFAULT 1,
+        sort_order INT DEFAULT 0,
+        UNIQUE KEY page_section (page, section_key)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ');
 
 $db->exec('
     CREATE TABLE IF NOT EXISTS content (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        page TEXT NOT NULL,
-        content_key TEXT NOT NULL,
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        page VARCHAR(255) NOT NULL,
+        content_key VARCHAR(255) NOT NULL,
         content_value TEXT DEFAULT NULL,
-        content_type TEXT DEFAULT \'text\',
-        label TEXT,
-        UNIQUE(page, content_key)
-    )
+        content_type VARCHAR(50) DEFAULT \'text\',
+        label VARCHAR(255),
+        UNIQUE KEY page_content (page, content_key)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ');
 
 // Seed default admin user (admin / admin123) - change password after first login!
-$existingUser = $db->querySingle("SELECT id FROM users WHERE username = 'admin'");
+$stmt = $db->prepare('SELECT id FROM users WHERE username = :u');
+$stmt->bindValue(':u', 'admin', PDO::PARAM_STR);
+$stmt->execute();
+$existingUser = $stmt->fetchColumn();
 if (!$existingUser) {
     $hash = password_hash('admin123', PASSWORD_DEFAULT);
     $stmt = $db->prepare('INSERT INTO users (username, password) VALUES (:u, :p)');
-    $stmt->bindValue(':u', 'admin', SQLITE3_TEXT);
-    $stmt->bindValue(':p', $hash, SQLITE3_TEXT);
+    $stmt->bindValue(':u', 'admin', PDO::PARAM_STR);
+    $stmt->bindValue(':p', $hash, PDO::PARAM_STR);
     $stmt->execute();
     echo "Default admin user created (admin / admin123)\n";
 }
@@ -161,15 +164,14 @@ $sections = [
     ['error', 'error', 'Página de Erro', 1, 2],
 ];
 
-$stmtSec = $db->prepare('INSERT OR IGNORE INTO sections (page, section_key, section_label, visible, sort_order) VALUES (:page, :key, :label, :visible, :sort)');
+$stmtSec = $db->prepare('INSERT IGNORE INTO sections (page, section_key, section_label, visible, sort_order) VALUES (:page, :key, :label, :visible, :sort)');
 foreach ($sections as $s) {
-    $stmtSec->bindValue(':page', $s[0], SQLITE3_TEXT);
-    $stmtSec->bindValue(':key', $s[1], SQLITE3_TEXT);
-    $stmtSec->bindValue(':label', $s[2], SQLITE3_TEXT);
-    $stmtSec->bindValue(':visible', $s[3], SQLITE3_INTEGER);
-    $stmtSec->bindValue(':sort', $s[4], SQLITE3_INTEGER);
+    $stmtSec->bindValue(':page', $s[0], PDO::PARAM_STR);
+    $stmtSec->bindValue(':key', $s[1], PDO::PARAM_STR);
+    $stmtSec->bindValue(':label', $s[2], PDO::PARAM_STR);
+    $stmtSec->bindValue(':visible', $s[3], PDO::PARAM_INT);
+    $stmtSec->bindValue(':sort', $s[4], PDO::PARAM_INT);
     $stmtSec->execute();
-    $stmtSec->reset();
 }
 echo "Sections seeded (" . count($sections) . " entries)\n";
 
@@ -343,16 +345,15 @@ $contentKeys = [
     ['error', 'error_description', 'Erro — Descrição', 'Sorry, the page you are looking for does not exist.', 'textarea'],
 ];
 
-$stmtContent = $db->prepare('INSERT OR IGNORE INTO content (page, content_key, content_value, content_type, label) VALUES (:page, :key, :value, :type, :label)');
+$stmtContent = $db->prepare('INSERT IGNORE INTO content (page, content_key, content_value, content_type, label) VALUES (:page, :key, :value, :type, :label)');
 foreach ($contentKeys as $ck) {
-    $stmtContent->bindValue(':page', $ck[0], SQLITE3_TEXT);
-    $stmtContent->bindValue(':key', $ck[1], SQLITE3_TEXT);
-    $stmtContent->bindValue(':value', null, SQLITE3_NULL);
-    $stmtContent->bindValue(':type', $ck[4], SQLITE3_TEXT);
-    $stmtContent->bindValue(':label', $ck[3], SQLITE3_TEXT);
+    $stmtContent->bindValue(':page', $ck[0], PDO::PARAM_STR);
+    $stmtContent->bindValue(':key', $ck[1], PDO::PARAM_STR);
+    $stmtContent->bindValue(':value', null, PDO::PARAM_NULL);
+    $stmtContent->bindValue(':type', $ck[4], PDO::PARAM_STR);
+    $stmtContent->bindValue(':label', $ck[3], PDO::PARAM_STR);
     $stmtContent->execute();
-    $stmtContent->reset();
 }
 echo "Content keys seeded (" . count($contentKeys) . " entries)\n";
 
-echo "\nDatabase initialized successfully at: " . DB_PATH . "\n";
+echo "\nDatabase initialized successfully.\n";
